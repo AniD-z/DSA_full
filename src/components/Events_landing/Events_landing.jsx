@@ -12,12 +12,9 @@ export default function Events_landing() {
                 <img src="valo_gif.gif" alt="" />
               </figure>
               <div class="article-body">
-                <h2>VALORANT</h2>
+                <h2>Level 1</h2>
                 <p>
-                  Join us for an action-packed intercollege Valorant tournament
-                  with big cash prizes up for grabs! Test your skills against
-                  other college teams in intense gameplay that rewards strategy
-                  and teamwork. Don't miss out on this thrilling gaming event!
+                  On the 17th of August, 2017, someone has stolen the locker keys of another member in the gym lounge accessible to only those with a silver membership. From the CCTV footage, the culprit had never been seen before or after this date, can you find the culprit?
                 </p>
                 <a href="/input" class="read-more">
                   Register-now{" "}
@@ -44,12 +41,9 @@ export default function Events_landing() {
                 <img src="fifa_gif.gif" alt="" />
               </figure>
               <div class="article-body">
-                <h2>FIFA</h2>
+                <h2>Level 2</h2>
                 <p>
-                  Experience the excitement of football on the virtual field!
-                  Join our intercollege FIFA tournament and compete for
-                  thrilling cash prizes. Register now and show off your skills
-                  in this epic gaming event!
+                  A woman named Noemi Malamud has been kidnapped! Reports state that the kidnapper was a red haired female in her 20s. She drove away in a Mercedes car of unknown model. A witness also claims that the kidnapper did not have black eyes. The victim was last seen in SQL City, April 17th, 2018. The victim's husband has hired you to find the culprit, claiming that the cops were unhelpful.
                 </p>
                 <a href="/input" class="read-more">
                   Register-now{" "}
@@ -76,12 +70,9 @@ export default function Events_landing() {
                 <img src="pubg_gif.gif" alt="" />
               </figure>
               <div class="article-body">
-                <h2>BGMI</h2>
+                <h2>Level 3</h2>
                 <p>
-                  Join our BGMI intercollege tournament and win exciting cash
-                  prizes! Show off your mobile gaming skills and battle it out
-                  with players from other colleges. Don't miss this chance to be
-                  a champion!{" "}
+                 A petty theft was committed as you were on your way home. You remember that the plate number of the car started and ended with the number '3', and that there was an 'A' somewhere in between. You caught a glimpse of green as the culprit took a turn. Can you identify the culprit?
                 </p>
                 <a href="/input" class="read-more">
                   Register-now{" "}
@@ -109,12 +100,9 @@ export default function Events_landing() {
                 <img src="hackathon_gif.gif" alt="" />
               </figure>
               <div class="article-body">
-                <h2>Hackathon</h2>
+                <h2>Level 4</h2>
                 <p>
-                  Join the gaming event's VR/AR hackathon to create innovative
-                  experiences using cutting-edge technology and expert
-                  mentorship. Win exciting prizes and explore the potential of
-                  VR/AR.
+                 A professional con artist has been impersonating people to gather sensitive information, the only lead the cops were able to find is that this person has been quite active on social media. There is also a good chance that the con artist is a woman. Can you find this culprit with just this information?
                 </p>
                 <a href="/input" class="read-more">
                   Register-now{" "}
@@ -142,9 +130,9 @@ export default function Events_landing() {
                 <img src="hunt_gif.gif" alt="" />
               </figure>
               <div class="article-body">
-                <h2>Rendezvous</h2>
+                <h2>Level 5</h2>
                 <p>
-                Get ready for an adventure like no other! Our treasure hunt event uses cutting-edge AR technology to create an immersive experience. Solve clues, discover hidden treasures, and compete with friends in this unique and thrilling adventure. Join us now!
+               A jewelry store was robbed in SQL City, from the crime reports, the cops have identified the suspect's first name to be Johnathan, a blonde haired elderly individual. However, they are unable to find the car he escaped in. You've been given the job to find the car plate number of the suspect, so that the investigation can proceed.
 
                 </p>
                 <a href="/input" class="read-more">
@@ -173,9 +161,9 @@ export default function Events_landing() {
                 <img src="gaming_arena.gif" alt="" />
               </figure>
               <div class="article-body">
-                <h2>Gaming-Arena</h2>
+                <h2>Level 6</h2>
                 <p>
-                Welcome to Console Crusade, the ultimate gaming arena for console and PC enthusiasts! Get ready to embark on an epic gaming adventure with titles like Uncharted, Forza 5, Mortal Kombat, and Spider-Man. Join us for an unforgettable gaming experience and compete with fellow gamers for glory!{" "}
+               A crime has taken place and the detective needs your help. The detective gave you the crime scene report, but you somehow lost it. You vaguely remember that the crime was a ​murder​ that occurred sometime on ​Jan.15, 2018​ and that it took place in ​SQL City​. Start by retrieving the corresponding crime scene report from the police department’s database.
                 </p>
                 <a href="/input" class="read-more">
                   {" "}

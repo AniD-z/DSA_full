@@ -11,7 +11,7 @@ export default function Introloader() {
       {/* <a href="#intro-sec"> */}
       <div className="intro-box ">
         <div className="intro-btn"></div>
-        <div className="intro-btn-txt">GG</div>
+        <div className="intro-btn-txt">SV</div>
       </div>
       {/* </a> */}
     </section>
