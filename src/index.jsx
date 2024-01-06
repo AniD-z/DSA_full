@@ -9,7 +9,7 @@ import EventPage from "./components/event_forms/eventpage";
 import App from "./App";
 import Hackathon from "./components/event_forms/hackathon";
 import Rendezvous from "./components/event_forms/rendezvous";
-
+import Input from "./input";
 
 function Routee() {
   return (
@@ -17,6 +17,7 @@ function Routee() {
       <BrowserRouter>
         <Routes>
           <Route index element={<App />} />
+          <Route path="/input" exact element={<Input />} />
           <Route path="/valorant-registration" exact element={<Valorant />} />
           <Route path="/fifa-registration" exact element={<Fifa />} />
           <Route path="/bgmi-registration" exact element={<Bgmi />} />
