@@ -177,7 +177,7 @@ export default function Events_landing() {
                 <p>
                 Welcome to Console Crusade, the ultimate gaming arena for console and PC enthusiasts! Get ready to embark on an epic gaming adventure with titles like Uncharted, Forza 5, Mortal Kombat, and Spider-Man. Join us for an unforgettable gaming experience and compete with fellow gamers for glory!{" "}
                 </p>
-                {/* <a href="#" class="read-more">
+                <a href="/input" class="read-more">
                   {" "}
                   <span class="sr-only">about this is some title</span>
                   <svg
@@ -192,106 +192,7 @@ export default function Events_landing() {
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a> */}
-              </div>
-            </div>
-          </article>
-
-          <article>
-            <div class="article-wrapper">
-              <figure>
-                <img src="VR_gif.gif" alt="" />
-              </figure>
-              <div class="article-body">
-                <h2>Hallucinate</h2>
-                <p>
-                Experience a world beyond your imagination with our VR event featuring the Oculus headset! Explore amazing virtual landscapes, interact with objects, and immerse yourself in an entirely new reality. Join us for a mind-bending experience that will leave you wanting more!
-
-                </p>
-                {/* <a href="#" class="read-more">
-                  {" "}
-                  <span class="sr-only">about this is some title</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </a> */}
-              </div>
-            </div>
-          </article>
-
-          <article>
-            <div class="article-wrapper">
-              <figure>
-                <img src="laser_gif.gif" alt="" />
-              </figure>
-              <div class="article-body">
-                <h2>Laser Maze</h2>
-                <p>
-                  Test your agility, speed, and stealth in our flagship event's
-                  laser maze challenge. Navigate through a maze of laser beams
-                  without setting off alarms. With immersive gameplay and
-                  cutting-edge technology, experience a thrilling world of spy
-                  missions and espionage.{" "}
-                </p>
-                {/* <a href="#" class="read-more">
-                {" "}
-                  <span class="sr-only">about this is some title</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </a> */}
-              </div>
-            </div>
-          </article>
-
-          <article>
-            <div class="article-wrapper">
-              <figure>
-                <img src="movie_gif.gif" alt="" />
-              </figure>
-              <div class="article-body">
-                <h2>Flash</h2>
-                <p>
-                  Watch the epic finale of the Avengers saga at GG's special
-                  screening of Avengers: Endgame. Join us for a thrilling
-                  cinematic experience with stunning visual effects and an
-                  all-star cast. Don't miss your chance to see this blockbuster
-                  movie on the big screen at our gaming event.{" "}
-                </p>
-                {/* <a href="#" class="read-more">
-                Read-more{" "}
-                  <span class="sr-only">about this is some title</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </a> */}
+                </a>
               </div>
             </div>
           </article>
