@@ -136,20 +136,20 @@ export const Intro = () => {
     <section className="intro-page">
       <div className="intro-start-box ff-tc">
         <div className="intro-quote ">
-          <div className="qt-txt qt-up">Forging your</div>
-          <div className="qt-emp">THOUGHTS</div>
-          <div className="qt-txt qt-down">to ACTIONS!</div>
+          <div className="qt-txt qt-up">Enhancing your</div>
+          <div className="qt-emp">INGENUITY</div>
+          <div className="qt-txt qt-down">while playing!</div>
         </div>
         <div className="intro-title intro-lap">
           <div className="title-up">
-            <div className="">gamers</div>
+            <div className="">SCHEMA</div>
             <div className="line-up">
               <div className="line"></div>
               <div className="date-up ">Apr 21,22</div>
             </div>
           </div>
           <div className="title-down">
-            <div className="">garage!</div>
+            <div className="">VERSE!</div>
             <div className="line-down">
               <div className="line"></div>
               <div className="date-down ">Apr 21,22</div>
@@ -161,21 +161,21 @@ export const Intro = () => {
           {/* <div className="title-left ot-red"> */}
           <div className="title-mob-box">
             <ul className="title-mob ul-left">
-              <li className="">G</li>
-              <li className="">A</li>
-              <li className="">M</li>
-              <li className="">E</li>
-              <li className="">R</li>
               <li className="">S</li>
+              <li className="">C</li>
+              <li className="">H</li>
+              <li className="">E</li>
+              <li className="">M</li>
+              <li className="">A</li>
             </ul>
             {/* </div> */}
             {/* <div className="title-right ot-red text-black"> */}
             <ul className="title-mob ul-right">
-              <li>G</li>
-              <li>A</li>
+              <li>V</li>
+              <li>E</li>
               <li>R</li>
-              <li>A</li>
-              <li>G</li>
+              <li>S</li>
+              
               <li>E</li>
             </ul>
           </div>
