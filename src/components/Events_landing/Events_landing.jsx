@@ -19,7 +19,7 @@ export default function Events_landing() {
                   other college teams in intense gameplay that rewards strategy
                   and teamwork. Don't miss out on this thrilling gaming event!
                 </p>
-                <a href="/valorant" class="read-more">
+                <a href="/input" class="read-more">
                   Register-now{" "}
                   <span class="sr-only">about this is some title</span>
                   <svg
@@ -51,7 +51,7 @@ export default function Events_landing() {
                   thrilling cash prizes. Register now and show off your skills
                   in this epic gaming event!
                 </p>
-                <a href="/fifa" class="read-more">
+                <a href="/input" class="read-more">
                   Register-now{" "}
                   <span class="sr-only">about this is some title</span>
                   <svg
@@ -83,7 +83,7 @@ export default function Events_landing() {
                   with players from other colleges. Don't miss this chance to be
                   a champion!{" "}
                 </p>
-                <a href="/pubg" class="read-more">
+                <a href="/input" class="read-more">
                   Register-now{" "}
                   <span class="sr-only">about this is some title</span>
                   <svg
@@ -116,7 +116,7 @@ export default function Events_landing() {
                   mentorship. Win exciting prizes and explore the potential of
                   VR/AR.
                 </p>
-                <a href="/hackathon" class="read-more">
+                <a href="/input" class="read-more">
                   Register-now{" "}
                   <span class="sr-only">about this is some title</span>
                   <svg
@@ -147,7 +147,7 @@ export default function Events_landing() {
                 Get ready for an adventure like no other! Our treasure hunt event uses cutting-edge AR technology to create an immersive experience. Solve clues, discover hidden treasures, and compete with friends in this unique and thrilling adventure. Join us now!
 
                 </p>
-                <a href="/rendezvous" class="read-more">
+                <a href="/input" class="read-more">
                   Register-now{" "}
                   <span class="sr-only">about this is some title</span>
                   <svg
