@@ -6,42 +6,42 @@ export default function Events_landing() {
 
   const handleClick1 = () => {
 
-    const parameterObject = { qn: 'On the 17th of August, 2017, someone has stolen the locker keys of another member in the gym lounge accessible to only those with a silver membership. From the CCTV footage, the culprit had never been seen before or after this date, can you find the culprit?', key2: 'value1' };
+    const parameterObject = { qn: 'On the 17th of August, 2017, someone has stolen the locker keys of another member in the gym lounge accessible to only those with a silver membership. From the CCTV footage, the culprit had never been seen before or after this date, can you find the culprit?', ans: 'value1' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
   };
   const handleClick2 = () => {
 
-    const parameterObject = { qn: `A woman named Noemi Malamud has been kidnapped! Reports state that the kidnapper was a red haired female in her 20s. She drove away in a Mercedes car of unknown model. A witness also claims that the kidnapper did not have black eyes. The victim was last seen in SQL City, April 17th, 2018.The victim's husband has hired you to find the culprit, claiming that the cops were unhelpful.`, key2: 'value2' };
+    const parameterObject = { qn: `A woman named Noemi Malamud has been kidnapped! Reports state that the kidnapper was a red haired female in her 20s. She drove away in a Mercedes car of unknown model. A witness also claims that the kidnapper did not have black eyes. The victim was last seen in SQL City, April 17th, 2018.The victim's husband has hired you to find the culprit, claiming that the cops were unhelpful.`, ans: 'value2' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
   };
   const handleClick3 = () => {
 
-    const parameterObject = { key1: `A petty theft was committed as you were on your way home. You remember that the plate number of the car started and ended with the number '3', and that there was an 'A' somewhere in between. You caught a glimpse of green as the culprit took a turn. Can you identify the culprit?`, key2: 'value3' };
+    const parameterObject = { qn: `A petty theft was committed as you were on your way home. You remember that the plate number of the car started and ended with the number '3', and that there was an 'A' somewhere in between. You caught a glimpse of green as the culprit took a turn. Can you identify the culprit?`, ans: 'value3' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
   };
   const handleClick4 = () => {
 
-    const parameterObject = { key1: `A professional con artist has been impersonating people to gather sensitive information, the only lead the cops were able to find is that this person has been quite active on social media. There is also a good chance that the con artist is a woman. Can you find this culprit with just this information?`, key2: 'value4' };
+    const parameterObject = { qn: `A professional con artist has been impersonating people to gather sensitive information, the only lead the cops were able to find is that this person has been quite active on social media. There is also a good chance that the con artist is a woman. Can you find this culprit with just this information?`, ans: 'value4' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
   };
   const handleClick5 = () => {
 
-    const parameterObject = { key1: 'value1', key2: 'value2' };
+    const parameterObject = { qn: `A jewelry store was robbed in SQL City, from the crime reports, the cops have identified the suspect's first name to be Johnathan, a blonde haired elderly individual. However, they are unable to find the car he escaped in. You've been given the job to find the car plate number of the suspect, so that the investigation can proceed.`, ans: 'value5' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
   };
   const handleClick6 = () => {
 
-    const parameterObject = { key1: 'value1', key2: 'value2' };
+    const parameterObject = { qn: `A crime has taken place and the detective needs your help. The detective gave you the crime scene report, but you somehow lost it. You vaguely remember that the crime was a ​murder​ that occurred sometime on ​Jan.15, 2018​ and that it took place in ​SQL City​. Start by retrieving the corresponding crime scene report from the police department’s database.`, ans: 'value6' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
