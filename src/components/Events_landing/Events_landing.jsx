@@ -1,6 +1,6 @@
 import React from "react";
 import "./Events_landing.css";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // import { GameProvider, useGameContext } from './GameContext';
 export default function Events_landing() {
   const navigate = useNavigate();
