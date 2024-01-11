@@ -7,6 +7,7 @@ import { monokai } from '@uiw/codemirror-theme-monokai';
 import Axios from "axios";
 import Button from '@mui/material/Button';
 import { useLocation } from 'react-router-dom';
+import { useGameContext } from "./components/Events_landing/GameContext";
 // function Input(){
 //     return(
 //         <div>
@@ -20,21 +21,27 @@ import { useLocation } from 'react-router-dom';
 function Input() {
     // let  state = useLocation();
     const location = useLocation();
+    const { gameSolution } = useGameContext();
 
     const [docs , setDocs] = React.useState([])
 
     useEffect(() => {
         document.body.style.backgroundColor = "#DCF2F1"
         document.body.style.paddingLeft = "18rem";
-        // console.log("bitchhhh")
-        // console.log(state)
-        const queryParams = new URLSearchParams(location.search);
-        const parameterString = queryParams.get('param');
-        if (parameterString) {
-            const parameterObject = JSON.parse(decodeURIComponent(parameterString));
-            console.log(parameterObject);
-        }
-    }, [location.search])
+        console.log(gameSolution)
+    }, [])
+    // useEffect(() => {
+    //     document.body.style.backgroundColor = "#DCF2F1"
+    //     document.body.style.paddingLeft = "18rem";
+    //     // console.log("bitchhhh")
+    //     // console.log(state)
+    //     const queryParams = new URLSearchParams(location.search);
+    //     const parameterString = queryParams.get('param');
+    //     if (parameterString) {
+    //         const parameterObject = JSON.parse(decodeURIComponent(parameterString));
+    //         console.log(parameterObject);
+    //     }
+    // }, [location.search])
 
 
     const [value, setValue] = React.useState("db.collection.operation(query) \n \n \n \n \n");

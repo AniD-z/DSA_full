@@ -1,13 +1,17 @@
 import React from "react";
 import "./Events_landing.css";
 import { useNavigate } from 'react-router-dom';
-
+import { useGameContext } from './GameContext';
 export default function Events_landing() {
   const navigate = useNavigate();
+  const { setSolution } = useGameContext();
   const handleClick = () => {
-    const parameterObject = { key1: 'value1', key2: 'value2' };
-    const parameterString = encodeURIComponent(JSON.stringify(parameterObject));
-    navigate(`/input?param=${parameterString}`);
+    // const parameterObject = { key1: 'value1', key2: 'value2' };
+    // const parameterString = encodeURIComponent(JSON.stringify(parameterObject));
+    const gameSolution = { level: 1, solution: 'your_solution_here' };
+
+    navigate(`/input`);
+    // navigate(`/input?param=${parameterString}`);
   };
   return (
     <div className="about-page">
