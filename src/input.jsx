@@ -25,7 +25,8 @@ function Input() {
     const [docs , setDocs] = React.useState([])
 
     useEffect(() => {
-        document.body.style.backgroundColor = "#DCF2F1"
+        document.body.style.backgroundColor = "#000"
+        // document.body.style.backgroundColor = "#DCF2F1"
         document.body.style.paddingLeft = "18rem";
         // console.log("bitchhhh")
         // console.log(state)

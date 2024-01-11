@@ -20,14 +20,14 @@ export default function Events_landing() {
   };
   const handleClick3 = () => {
 
-    const parameterObject = { key1: 'value1', key2: 'value2' };
+    const parameterObject = { key1: `A petty theft was committed as you were on your way home. You remember that the plate number of the car started and ended with the number '3', and that there was an 'A' somewhere in between. You caught a glimpse of green as the culprit took a turn. Can you identify the culprit?`, key2: 'value3' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
   };
   const handleClick4 = () => {
 
-    const parameterObject = { key1: 'value1', key2: 'value2' };
+    const parameterObject = { key1: `A professional con artist has been impersonating people to gather sensitive information, the only lead the cops were able to find is that this person has been quite active on social media. There is also a good chance that the con artist is a woman. Can you find this culprit with just this information?`, key2: 'value4' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
