@@ -1,15 +1,15 @@
 import React from "react";
 import "./Events_landing.css";
 import { useNavigate } from 'react-router-dom';
-import { useGameContext } from './GameContext';
+import { GameProvider, useGameContext } from './GameContext';
 export default function Events_landing() {
   const navigate = useNavigate();
-  const { setSolution } = useGameContext();
+  const { setGameSolution } = useGameContext();
+
   const handleClick = () => {
-    // const parameterObject = { key1: 'value1', key2: 'value2' };
-    // const parameterString = encodeURIComponent(JSON.stringify(parameterObject));
-    const gameSolution = { level: 1, solution: 'your_solution_here' };
-    setSolution(gameSolution);
+
+    const defaultSolution = { level: 1, solution: 'default_solution' };
+    setGameSolution(defaultSolution);
 
     navigate(`/input`);
     // navigate(`/input?param=${parameterString}`);
@@ -18,6 +18,7 @@ export default function Events_landing() {
     <div className="about-page">
       <div>
         <section class="articles">
+        <GameProvider>
           <article>
             <div class="article-wrapper">
               <figure>
@@ -196,6 +197,7 @@ export default function Events_landing() {
               </div>
             </div>
           </article>
+          </GameProvider>
         </section>
       </div>
     </div>

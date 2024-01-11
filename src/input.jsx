@@ -6,8 +6,10 @@ import { autocompletion } from "@codemirror/autocomplete"
 import { monokai } from '@uiw/codemirror-theme-monokai';
 import Axios from "axios";
 import Button from '@mui/material/Button';
-import { useLocation } from 'react-router-dom';
 import { useGameContext } from "./components/Events_landing/GameContext";
+
+// import { useLocation } from 'react-router-dom';
+// import { useGameContext } from "./components/Events_landing/GameContext";
 // function Input(){
 //     return(
 //         <div>

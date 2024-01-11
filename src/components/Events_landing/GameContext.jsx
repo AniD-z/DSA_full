@@ -1,20 +1,22 @@
 // GameContext.js
-import { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const GameContext = createContext();
 
 export const GameProvider = ({ children }) => {
   const [gameSolution, setGameSolution] = useState(null);
 
-  const setSolution = (solution) => {
-    setGameSolution(solution);
-  };
-
   return (
-    <GameContext.Provider value={{ gameSolution, setSolution }}>
+    <GameContext.Provider value={{ gameSolution, setGameSolution }}>
       {children}
     </GameContext.Provider>
   );
 };
 
-export const useGameContext = () => useContext(GameContext);
+export const useGameContext = () => {
+  const context = useContext(GameContext);
+  if (!context) {
+    throw new Error('useGameContext must be used within a GameProvider');
+  }
+  return context;
+};
