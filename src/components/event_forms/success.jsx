@@ -1,10 +1,14 @@
 import "./style.css";
-// import neon_gif from "neon_gif.gif";
-function SuccussPage() {
+import Confetti from "react-confetti";
+
+function SuccessPage() {
+  const { width, height } = useWindowSize();
+
   return (
     <div className="succuss" style={{ textAlign: "center" }}>
       <div>
-        <h1 className="text-succuss">Succussfully Registered for the event</h1>
+        <Confetti width={width} height={height} recycle={false} />
+        <h1 className="text-succuss">Successfully Registered for the event</h1>
         <p>
           Explore our other events{" "}
           <a
@@ -20,11 +24,8 @@ function SuccussPage() {
           .
         </p>
       </div>
-      {/* <div>
-        <img src={neon_gif} className="succuss-img"></img>
-      </div> */}
     </div>
   );
 }
 
-export default SuccussPage;
+export default SuccessPage;
