@@ -32,9 +32,9 @@ function Input() {
         const queryParams = new URLSearchParams(location.search);
         const parameterString = queryParams.get('param');
         if (parameterString) {
-            // const parameterObject = JSON.parse(decodeURIComponent(parameterString));
-            // console.log(parameterObject);
-            console.log(parameterString)
+            const parameterObject = JSON.parse(decodeURIComponent(atob(parameterString)));
+            console.log(parameterObject);
+            // console.log(parameterString)
         }
     }, [location.search])
 
