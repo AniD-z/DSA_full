@@ -7,7 +7,7 @@ export default function Events_landing() {
   const handleClick = () => {
 
     const parameterObject = { key1: 'value1', key2: 'value2' };
-    const parameterString = encodeURIComponent(JSON.stringify(parameterObject));
+    const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
   };

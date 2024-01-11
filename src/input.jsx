@@ -7,7 +7,7 @@ import { monokai } from '@uiw/codemirror-theme-monokai';
 import Axios from "axios";
 import Button from '@mui/material/Button';
 
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 // import { useGameContext } from "./components/Events_landing/GameContext";
 // function Input(){
 //     return(
@@ -32,8 +32,9 @@ function Input() {
         const queryParams = new URLSearchParams(location.search);
         const parameterString = queryParams.get('param');
         if (parameterString) {
-            const parameterObject = JSON.parse(decodeURIComponent(parameterString));
-            console.log(parameterObject);
+            // const parameterObject = JSON.parse(decodeURIComponent(parameterString));
+            // console.log(parameterObject);
+            console.log(parameterString)
         }
     }, [location.search])
 
