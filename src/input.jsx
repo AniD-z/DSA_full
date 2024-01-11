@@ -20,29 +20,22 @@ import Button from '@mui/material/Button';
 // }
 
 function Input() {
-    // let  state = useLocation();
-    // const location = useLocation();
-    // const { gameSolution } = useGameContext();
+    const location = useLocation();
 
-    // const [docs , setDocs] = React.useState([])
+    const [docs , setDocs] = React.useState([])
 
     useEffect(() => {
         document.body.style.backgroundColor = "#DCF2F1"
         document.body.style.paddingLeft = "18rem";
-    //     console.log(gameSolution)
-    }, [])
-    // useEffect(() => {
-    //     document.body.style.backgroundColor = "#DCF2F1"
-    //     document.body.style.paddingLeft = "18rem";
-    //     // console.log("bitchhhh")
-    //     // console.log(state)
-    //     const queryParams = new URLSearchParams(location.search);
-    //     const parameterString = queryParams.get('param');
-    //     if (parameterString) {
-    //         const parameterObject = JSON.parse(decodeURIComponent(parameterString));
-    //         console.log(parameterObject);
-    //     }
-    // }, [location.search])
+        // console.log("bitchhhh")
+        // console.log(state)
+        const queryParams = new URLSearchParams(location.search);
+        const parameterString = queryParams.get('param');
+        if (parameterString) {
+            const parameterObject = JSON.parse(decodeURIComponent(parameterString));
+            console.log(parameterObject);
+        }
+    }, [location.search])
 
 
     const [value, setValue] = React.useState("db.collection.operation(query) \n \n \n \n \n");
