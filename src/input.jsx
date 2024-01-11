@@ -6,7 +6,7 @@ import { autocompletion } from "@codemirror/autocomplete"
 import { monokai } from '@uiw/codemirror-theme-monokai';
 import Axios from "axios";
 import Button from '@mui/material/Button';
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 // function Input(){
 //     return(
 //         <div>
@@ -19,6 +19,7 @@ import Button from '@mui/material/Button';
 
 function Input() {
     // let  state = useLocation();
+    const location = useLocation();
 
     const [docs , setDocs] = React.useState([])
 
@@ -27,8 +28,13 @@ function Input() {
         document.body.style.paddingLeft = "18rem";
         // console.log("bitchhhh")
         // console.log(state)
-
-    }, [])
+        const queryParams = new URLSearchParams(location.search);
+        const parameterString = queryParams.get('param');
+        if (parameterString) {
+            const parameterObject = JSON.parse(decodeURIComponent(parameterString));
+            console.log(parameterObject);
+        }
+    }, [location.search])
 
 
     const [value, setValue] = React.useState("db.collection.operation(query) \n \n \n \n \n");

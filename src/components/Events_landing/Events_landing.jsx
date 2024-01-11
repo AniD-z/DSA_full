@@ -1,7 +1,14 @@
 import React from "react";
 import "./Events_landing.css";
+import { useNavigate } from 'react-router-dom';
 
 export default function Events_landing() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    const parameterObject = { key1: 'value1', key2: 'value2' };
+    const parameterString = encodeURIComponent(JSON.stringify(parameterObject));
+    navigate(`/input?param=${parameterString}`);
+  };
   return (
     <div className="about-page">
       <div>
@@ -16,7 +23,7 @@ export default function Events_landing() {
                 <p>
                   On the 17th of August, 2017, someone has stolen the locker keys of another member in the gym lounge accessible to only those with a silver membership. From the CCTV footage, the culprit had never been seen before or after this date, can you find the culprit?
                 </p>
-                <a href="/input" class="read-more">
+                <a href="#" class="read-more" onClick={handleClick}>
                   Play-now{" "}
                   <span class="sr-only">about this is some title</span>
                   <svg
