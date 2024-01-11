@@ -20,28 +20,28 @@ export default function Events_landing() {
   };
   const handleClick3 = () => {
 
-    const parameterObject = { key1: `A petty theft was committed as you were on your way home. You remember that the plate number of the car started and ended with the number '3', and that there was an 'A' somewhere in between. You caught a glimpse of green as the culprit took a turn. Can you identify the culprit?`, key2: 'value2' };
+    const parameterObject = { key1: 'value1', key2: 'value2' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
   };
   const handleClick4 = () => {
 
-    const parameterObject = { key1: `A professional con artist has been impersonating people to gather sensitive information, the only lead the cops were able to find is that this person has been quite active on social media. There is also a good chance that the con artist is a woman. Can you find this culprit with just this information?`, key2: 'value2' };
+    const parameterObject = { key1: 'value1', key2: 'value2' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
   };
   const handleClick5 = () => {
 
-    const parameterObject = { key1: `A jewelry store was robbed in SQL City, from the crime reports, the cops have identified the suspect's first name to be Johnathan, a blonde haired elderly individual. However, they are unable to find the car he escaped in. You've been given the job to find the car plate number of the suspect, so that the investigation can proceed.`, key2: 'value2' };
+    const parameterObject = { key1: 'value1', key2: 'value2' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
   };
   const handleClick6 = () => {
 
-    const parameterObject = { key1: `A crime has taken place and the detective needs your help. The detective gave you the crime scene report, but you somehow lost it. You vaguely remember that the crime was a ​murder​ that occurred sometime on ​Jan.15, 2018​ and that it took place in ​SQL City​. Start by retrieving the corresponding crime scene report from the police department’s database.`, key2: 'value2' };
+    const parameterObject = { key1: 'value1', key2: 'value2' };
     const parameterString = btoa(encodeURIComponent(JSON.stringify(parameterObject)))
 
     navigate(`/input?param=${parameterString}`);
