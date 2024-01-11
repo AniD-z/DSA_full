@@ -25,7 +25,7 @@ function Input() {
     useEffect(() => {
         document.body.style.backgroundColor = "#DCF2F1"
         document.body.style.paddingLeft = "18rem";
-        console.log("bitchhhh")
+        // console.log("bitchhhh")
         // console.log(state)
 
     }, [])
@@ -38,7 +38,7 @@ function Input() {
     }, []);
 
     async function handleSubmit() {
-        const response = await Axios.get("http://localhost:5000", {
+        const response = await Axios.get("https://backend-g50b.onrender.com", {
             params: {
                 input: value
             }
