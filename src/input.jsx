@@ -6,7 +6,6 @@ import { autocompletion } from "@codemirror/autocomplete"
 import { monokai } from '@uiw/codemirror-theme-monokai';
 import Axios from "axios";
 import Button from '@mui/material/Button';
-import { useGameContext } from "./components/Events_landing/GameContext";
 
 // import { useLocation } from 'react-router-dom';
 // import { useGameContext } from "./components/Events_landing/GameContext";
@@ -22,15 +21,15 @@ import { useGameContext } from "./components/Events_landing/GameContext";
 
 function Input() {
     // let  state = useLocation();
-    const location = useLocation();
-    const { gameSolution } = useGameContext();
+    // const location = useLocation();
+    // const { gameSolution } = useGameContext();
 
-    const [docs , setDocs] = React.useState([])
+    // const [docs , setDocs] = React.useState([])
 
     useEffect(() => {
         document.body.style.backgroundColor = "#DCF2F1"
         document.body.style.paddingLeft = "18rem";
-        console.log(gameSolution)
+    //     console.log(gameSolution)
     }, [])
     // useEffect(() => {
     //     document.body.style.backgroundColor = "#DCF2F1"
