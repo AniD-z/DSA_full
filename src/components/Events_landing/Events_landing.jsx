@@ -9,6 +9,7 @@ export default function Events_landing() {
     // const parameterObject = { key1: 'value1', key2: 'value2' };
     // const parameterString = encodeURIComponent(JSON.stringify(parameterObject));
     const gameSolution = { level: 1, solution: 'your_solution_here' };
+    setSolution(gameSolution);
 
     navigate(`/input`);
     // navigate(`/input?param=${parameterString}`);
