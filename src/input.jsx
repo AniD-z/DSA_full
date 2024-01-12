@@ -107,7 +107,7 @@ function Input() {
             <p>{question}</p>
             <CodeMirror
                 value={value}
-                width="30%"
+                width='60rem'
                 style={editorStyle}
                 theme={monokai}
                 extensions={[javascript({ jsx: true }), autocompletion({ override: [myCompletions] })
