@@ -30,7 +30,7 @@ export default function About() {
           <div className="hero-cards w-full">
             <div className="info-container flex flex-wrap h-full flex-col justify-evenly ">
               <Infocards
-                name="gaming"
+                name="Querying"
                 clr="black"
                 gif="/pics/gif1.gif"
                 bg="bg-white"
@@ -38,7 +38,7 @@ export default function About() {
               />
 
               <Infocards
-                name="gamification"
+                name="optimizing"
                 clr="white"
                 gif="/pics/gif2.gif"
                 bg="bg-black"
@@ -46,7 +46,7 @@ export default function About() {
               />
 
               <Infocards
-                name="game dev"
+                name="indexing"
                 clr="black"
                 gif="/pics/gif4.gif"
                 bg="bg-[#ece1d6]"
