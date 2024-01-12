@@ -108,7 +108,6 @@ function Input() {
             <p className="mobile-paragraph">{question}</p>
             <CodeMirror
                 value={value}
-                width='60rem'
                 style={editorStyle}
                 theme={monokai}
                 extensions={[javascript({ jsx: true }), autocompletion({ override: [myCompletions] })
