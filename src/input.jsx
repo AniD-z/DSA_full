@@ -75,7 +75,7 @@ function Input() {
     }
 
     return (
-        <div>
+        <div className="center">
             {/* <h1>Level {passedData.level}</h1>
             <p>{passedData.prob}</p> */}
             <CodeMirror
