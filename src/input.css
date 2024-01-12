@@ -16,4 +16,21 @@
     overflow-y: scroll;
     overflow-x: auto;
   }
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This will make the container take the full height of the viewport */
+  text-align: center; /* This will center the text inside the container */
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust the margin as per your requirement */
+}
   
