@@ -5,6 +5,7 @@
 }
 .mobile-paragraph{
   color: white;
+  padding-top: 20px;
 }
 
 
@@ -27,7 +28,7 @@
     border-width: 5px; /* Adjust the border width for smaller screens */
   }
   .mobile-paragraph {
-    /* Add your desired styles for mobile devices */
+    padding-top: 2rem;
   }
 }
 
