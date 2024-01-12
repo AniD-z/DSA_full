@@ -22,7 +22,7 @@ function Input() {
 
     useEffect(() => {
         document.body.style.backgroundColor = "#fff"
-        document.body.style.paddingLeft = "14rem";
+        
         document.body.style.paddingRight = "14rem";
 
         const queryParams = new URLSearchParams(location.search);
