@@ -16,7 +16,7 @@ import { useNavigate } from 'react-router-dom';
 function Input() {
     const location = useLocation();
     const navigate = useNavigate();
-
+    let parameterObject
     const [docs, setDocs] = React.useState([])
 
     useEffect(() => {
@@ -25,7 +25,7 @@ function Input() {
         const queryParams = new URLSearchParams(location.search);
         const parameterString = queryParams.get('param');
         if (parameterString) {
-            const parameterObject = JSON.parse(decodeURIComponent(atob(parameterString)));
+            parameterObject = JSON.parse(decodeURIComponent(atob(parameterString)));
             console.log(parameterObject.qn);
         }
     }, [location.search])
