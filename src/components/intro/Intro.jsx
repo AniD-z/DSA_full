@@ -145,14 +145,14 @@ export const Intro = () => {
             <div className="">SCHEMA</div>
             <div className="line-up">
               <div className="line"></div>
-              <div className="date-up ">Apr 21,22</div>
+              <div className="date-up "></div>
             </div>
           </div>
           <div className="title-down">
             <div className="">VERSE!</div>
             <div className="line-down">
               <div className="line"></div>
-              <div className="date-down ">Apr 21,22</div>
+              <div className="date-down "></div>
             </div>
           </div>
         </div>
