@@ -63,7 +63,8 @@ function Input() {
     }
 
     const editorStyle = {
-        fontSize: "1.5rem"
+        fontSize: "1.5rem",
+        marginTop: "2rem"
     }
     const completions = [
         // { label: "panic", type: "keyword" },
