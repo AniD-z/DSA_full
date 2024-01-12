@@ -171,7 +171,7 @@ export default function Events_landing() {
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="hunt_gif.gif" alt="" />
+                <img src="level5.gif" alt="" />
               </figure>
               <div class="article-body">
                 <h2>Level 5</h2>
