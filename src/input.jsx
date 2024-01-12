@@ -25,8 +25,9 @@ function Input() {
     const [docs , setDocs] = React.useState([])
 
     useEffect(() => {
-        document.body.style.backgroundColor = "#DCF2F1"
-        document.body.style.paddingLeft = "18rem";
+        document.body.style.backgroundColor = "#000000"
+               document.body.style.paddingLeft = "10rem";
+        document.body.style.paddingLeft="10rem";
         const queryParams = new URLSearchParams(location.search);
         const parameterString = queryParams.get('param');
         if (parameterString) {
@@ -87,7 +88,11 @@ function Input() {
                 ]}
                 onChange={onChange}
             />
-            <Button onClick={handleSubmit} variant="contained">SUBMIT</Button>
+                   <button onClick={handleSubmit} variant="contained" type="submit" className="valorant-btn">
+          <span class="underlay">
+            <span class="label">Submit</span>
+          </span>
+        </button>
 
             {docs.map((elem , index)=>{
                 return(
