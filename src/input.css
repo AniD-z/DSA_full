@@ -3,6 +3,9 @@
   border: 10px solid #91ca16;
   font-size: 1.5rem;
 }
+.mobile-paragraph{
+  color: white;
+}
 
 
   body {
@@ -23,9 +26,8 @@
     font-size: 1.2rem; /* Adjust the font size for smaller screens */
     border-width: 5px; /* Adjust the border width for smaller screens */
   }
-  p {
-    font-size: 1.2rem;
-    line-height: 1.2;
+  .mobile-paragraph {
+    /* Add your desired styles for mobile devices */
   }
 }
 
