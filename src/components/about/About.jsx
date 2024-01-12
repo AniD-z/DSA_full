@@ -11,20 +11,12 @@ export default function About() {
           <div className="info-text text-white text-[24px]">
             <p>
               {" "}
-              Welcome to <span className="span-emp">GG!</span>, the ultimate
-              gaming event that will take you on a journey of adventure,
-              excitement, and pure gaming fun! Join us on{" "}
-              <span className="span-emp">April 21st and 22nd</span> for two days
-              of non-stop gaming fun, including Hallucinate, where you'll
-              experience mind-bending VR gameplay, Rendezvous, a treasure hunt
-              with a high-tech twist, Flash, a special movie screening of your
-              favorite blockbuster films, and Alt+f4, a gaming tournament that
-              will test your skills and push you to the limit.
+              Welcome to <span className="span-emp">SchemaVerse</span>, the ultimate game that will teach you <span className="span-emp">NoSQL</span> commands in a fun and interactive way!
+
+SchemaVerse is a game that combines learning and entertainment, where you will use data to query, filter, aggregate, and analyze information. You can choose from a wide variety of levels, ranging from easy to hard, and challenge yourself with different scenarios and cases. You can also track your progress, and compete with other players on the leaderboard.
             </p>
             <p>
-              Get ready to immerse yourself in the world of gaming like never
-              before, connect with other passionate gamers, and have the time of
-              your life at GG!
+              SchemaVerse is more than just a game, it is a learning experience that will make you a NoSQL pro. So what are you waiting for? Try SchemaVerse today and unleash your inner detective! 🔎
             </p>
           </div>
           <div className="hero-cards w-full">
