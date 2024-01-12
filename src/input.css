@@ -33,4 +33,9 @@
   align-items: center;
   margin-top: 20px; /* Adjust the margin as per your requirement */
 }
+@media (max-width: 768px) {
+  .center {
+    height: 100%; /* Change the height to 100% for smaller screens */
+  }
+}
   
