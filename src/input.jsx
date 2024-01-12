@@ -125,12 +125,12 @@ function Input() {
             <p>Submit Your Answer Here</p>
             <H1>  </H1>
             <H1>  </H1>
-            <center><input value={ans} onChange={handleAnsChange}></input>
+            <input value={ans} onChange={handleAnsChange}></input>
             <button onClick={handleAnsSubmit} variant="contained" type="submit" className="valorant-btn">
                 <span class="underlay">
                     <span class="label">Submit</span>
                 </span>
-            </button></center>
+            </button>
 
 
             {docs.map((elem, index) => {
