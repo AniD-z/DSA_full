@@ -18,6 +18,7 @@ function Input() {
     const navigate = useNavigate();
     let parameterObject
     const [docs, setDocs] = React.useState([])
+    const [question, setQuestion] = React.useState("")
 
     useEffect(() => {
         document.body.style.backgroundColor = "#fff"
@@ -26,6 +27,7 @@ function Input() {
         const parameterString = queryParams.get('param');
         if (parameterString) {
             parameterObject = JSON.parse(decodeURIComponent(atob(parameterString)));
+            setQuestion(parameterObject.qn)
             console.log(parameterObject.qn);
         }
     }, [location.search])
@@ -100,7 +102,7 @@ function Input() {
             <Helmet>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Helmet>
-            <p>{parameterObject.qn}</p>
+            <p>{question}</p>
             <CodeMirror
                 value={value}
                 width='60rem'
