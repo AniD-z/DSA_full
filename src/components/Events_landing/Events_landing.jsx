@@ -141,7 +141,7 @@ export default function Events_landing() {
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="hackathon_gif.gif" alt="" />
+                <img src="level4.gif" alt="" />
               </figure>
               <div class="article-body">
                 <h2>Level 4</h2>
@@ -202,7 +202,7 @@ export default function Events_landing() {
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="gaming_arena.gif" alt="" />
+                <img src="level6.gif" alt="" />
               </figure>
               <div class="article-body">
                 <h2>Level 6</h2>
