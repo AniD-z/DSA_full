@@ -105,7 +105,7 @@ function Input() {
             <Helmet>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Helmet>
-            <p>{question}</p>
+            <p className="mobile-paragraph">{question}</p>
             <CodeMirror
                 value={value}
                 width='60rem'
@@ -123,7 +123,7 @@ function Input() {
             </button>
 
             {/* <img src={require()} alt="" /> */}
-            <p>Submit Your Answer Here</p>
+            <p className="mobile-paragraph">Submit Your Answer Here</p>
             <input value={ans} onChange={handleAnsChange}></input>
             <div>
             <button onClick={handleAnsSubmit} variant="contained" type="submit" className="valorant-btn">
