@@ -23,9 +23,9 @@
   
 @media (min-width: 640px) {
   .CodeMirror {
-    height: 150px; /* Adjust the height for smaller screens */
-    font-size: 1.2rem; /* Adjust the font size for smaller screens */
-    border-width: 5px; /* Adjust the border width for smaller screens */
+    height: 100px; /* Adjust the height for smaller screens */
+    font-size: 1rem; /* Adjust the font size for smaller screens */
+    border-width: 3px; /* Adjust the border width for smaller screens */
   }
   .mobile-paragraph {
     padding-top: 2rem;
