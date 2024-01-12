@@ -2,31 +2,31 @@
   height: 100px;
   border: 10px solid #91ca16;
   font-size: 1.5rem;
-  width: 30%;
-  margin: 0 auto;
+  width: 60%;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
 }
 
-body {
+  body {
+ 
+    justify-content: center;
+    align-items: center;
+    
+  }
   
-  padding-left: 14rem;
-  padding-right: 14rem;
-
-}
-
-.CodeMirror-scroll {
-  overflow-y: scroll;
-  overflow-x: auto;
-}
-
+  .CodeMirror-scroll {
+    overflow-y: scroll;
+    overflow-x: auto;
+  }
+  
 @media (min-width: 640px) {
   .CodeMirror {
-    height: 200px;
+    height: 200px; /* Adjust the height for larger screens */
   }
-}
-
-input {
-  font-size: 1.5rem;
-  margin-right: 1rem;
 }
 
 button {
