@@ -6,6 +6,7 @@ import { autocompletion } from "@codemirror/autocomplete"
 import { monokai } from '@uiw/codemirror-theme-monokai';
 import Axios from "axios";
 import Button from '@mui/material/Button';
+import "./input.css";
 
 
 import { useLocation } from 'react-router-dom';
