@@ -46,11 +46,11 @@ export default function Event_title() {
   return (
     <div className="">
       <section className="event-title event-lap ff-tc ">
-        <div className="title-right">Events</div>
+        <div className="title-right">Levels</div>
       </section>
 
       <section className="event-title-mob event-mon ff-tc ">
-        <div className="title">Events</div>
+        <div className="title">Levels</div>
       </section>
     </div>
   );
