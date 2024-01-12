@@ -77,7 +77,10 @@ function Input() {
     }
 
     return (
-        <div className="center">
+        <div class="sm:mx-auto md:mx-auto lg:mx-0 xl:mx-0">
+            <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Helmet>
             {/* <h1>Level {passedData.level}</h1>
             <p>{passedData.prob}</p> */}
             <CodeMirror
