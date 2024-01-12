@@ -124,11 +124,13 @@ function Input() {
             {/* <img src={require()} alt="" /> */}
             <p>Submit Your Answer Here</p>
             <input value={ans} onChange={handleAnsChange}></input>
+            <div>
             <button onClick={handleAnsSubmit} variant="contained" type="submit" className="valorant-btn">
                 <span class="underlay">
                     <span class="label">Submit</span>
                 </span>
             </button>
+                </div>
 
 
             {docs.map((elem, index) => {
