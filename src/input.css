@@ -24,3 +24,8 @@
     border-width: 5px; /* Adjust the border width for smaller screens */
   }
 }
+@media (max-width: 640px) {
+  p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
