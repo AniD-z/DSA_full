@@ -98,7 +98,7 @@ function Input() {
     }
 
     return (
-        <div class="sm:mx-auto md:mx-auto lg:mx-0 xl:mx-0 center">
+        <div class="sm:mx-auto md:mx-auto lg:mx-0 xl:mx-0">
             <Helmet>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Helmet>
