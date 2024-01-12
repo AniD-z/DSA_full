@@ -11,13 +11,9 @@ function Footer() {
             href="#"
             className="flex flex-wrap justify-center items-center mb-4 sm:mb-0"
           >
-            <img
-              src="/forge_trans.png"
-              className="h-[150px] mr-3"
-              alt="Flowbite Logo"
-            />
+           
             <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white ff-tc uppercase">
-              Gamers's Garage
+              Schema Verse
             </span>
           </a>
           <ul className="flex flex-wrap justify-center  items-center mb-6 text-sm font-medium text-black-500 sm:mb-0 dark:text-black-400">
@@ -34,7 +30,7 @@ function Footer() {
                 href="#Events"
                 className="mr-4 hover:underline hover:text-white md:mr-6"
               >
-                Events
+                Levels
               </a>
             </li>
           </ul>
@@ -64,7 +60,7 @@ function Footer() {
                 href=""
                 className="mr-4 hover:underline hover:text-white md:mr-6"
               >
-                forgeaseb@gmail.com
+                notmadeyet@gmail.com
               </a>
             </li>
           </ul>
@@ -73,7 +69,7 @@ function Footer() {
         <span className="block text-sm text-black-500 text-center ">
           © 2023{" "}
           <a href="" className="hover:underline hover:text-white">
-            Forge™
+            SV™
           </a>
           . All Rights Reserved.
         </span>
