@@ -122,8 +122,9 @@ function Input() {
             </button>
 
             {/* <img src={require()} alt="" /> */}
-            <p className="mobile-paragraph">Submit Your Answer Here</p>
+            
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <p className="mobile-paragraph">Submit Your Answer Here</p>
                 <input value={ans} onChange={handleAnsChange}></input>
                 <button onClick={handleAnsSubmit} variant="contained" type="submit" className="valorant-btn">
                     <span class="underlay">
