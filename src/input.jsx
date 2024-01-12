@@ -123,14 +123,14 @@ function Input() {
 
             {/* <img src={require()} alt="" /> */}
             <p className="mobile-paragraph">Submit Your Answer Here</p>
-            <input value={ans} onChange={handleAnsChange}></input>
-            <div>
-            <button onClick={handleAnsSubmit} variant="contained" type="submit" className="valorant-btn">
-                <span class="underlay">
-                    <span class="label">Submit</span>
-                </span>
-            </button>
-                </div>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <input value={ans} onChange={handleAnsChange}></input>
+                <button onClick={handleAnsSubmit} variant="contained" type="submit" className="valorant-btn">
+                    <span class="underlay">
+                        <span class="label">Submit</span>
+                    </span>
+                </button>
+            </div>
 
 
             {docs.map((elem, index) => {
