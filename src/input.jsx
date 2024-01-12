@@ -10,26 +10,29 @@ import "./input.css";
 import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
 import Doc from "./Doc";
+import { useNavigate } from 'react-router-dom';
+
 
 function Input() {
     const location = useLocation();
+    const navigate = useNavigate();
 
     const [docs, setDocs] = React.useState([])
 
     useEffect(() => {
         document.body.style.backgroundColor = "#fff"
-        document.body.style.paddingLeft = "10rem";
-        document.body.style.paddingLeft = "10rem";
+        document.body.style.paddingLeft = "14rem";
         const queryParams = new URLSearchParams(location.search);
         const parameterString = queryParams.get('param');
         if (parameterString) {
             const parameterObject = JSON.parse(decodeURIComponent(atob(parameterString)));
-            console.log(parameterObject);
+            console.log(parameterObject.qn);
         }
     }, [location.search])
 
 
     const [value, setValue] = React.useState("db.collection.operation(query) \n \n \n \n \n");
+    const [ans , setAns]=React.useState("")
     const onChange = React.useCallback((val, viewUpdate) => {
         console.log('val:', val);
         setValue(val);
@@ -44,6 +47,17 @@ function Input() {
         console.log(response.data)
         setDocs(response.data)
     }
+
+    function handleAnsChange(e){
+        setAns(e.target.value)
+    }
+
+    function handleAnsSubmit(){
+        if(ans==parameterObject.ans){
+            navigate(`/`);
+        }
+    }
+
     const editorStyle = {
         fontSize: "1.5rem"
     }
@@ -86,8 +100,7 @@ function Input() {
             <Helmet>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Helmet>
-            {/* <h1>Level {passedData.level}</h1>
-            <p>{passedData.prob}</p> */}
+            <p>{parameterObject.qn}</p>
             <CodeMirror
                 value={value}
                 width='60rem'
@@ -100,9 +113,20 @@ function Input() {
             />
             <button onClick={handleSubmit} variant="contained" type="submit" className="valorant-btn">
                 <span class="underlay">
+                    <span class="label">Execute</span>
+                </span>
+            </button>
+
+            {/* <img src={require()} alt="" /> */}
+            <p>Submit Your Answer Here</p>
+            <input value={ans} onChange={handleAnsChange}></input>
+            <button onClick={handleAnsSubmit} variant="contained" type="submit" className="valorant-btn">
+                <span class="underlay">
                     <span class="label">Submit</span>
                 </span>
             </button>
+
+
             {docs.map((elem, index) => {
                 return (
                     <Doc key={index} info={elem} />
