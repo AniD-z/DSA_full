@@ -58,6 +58,9 @@ function Input() {
         if(ans==parameterObject.ans){
             navigate(`/`);
         }
+        else{
+            setDocs([{"Result" :"Answer is incorrect" }])
+        }
     }
 
     const editorStyle = {

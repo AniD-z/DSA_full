@@ -11,12 +11,13 @@ function Doc({ info }) {
     height: '80%',
     padding: '20px',
     margin: 'auto',
-    marginBottom: '10px',
+    marginBottom: '20px',
     display: "flex",
     flexDirection: "column",
     position : "relative" , 
-    top : "40px" ,
-    right:"100px"
+    left:"5rem"
+    // top : "40px" ,
+    // right:"100px"
   };
 
   const renderFields = (data, parentKey = '') => {
