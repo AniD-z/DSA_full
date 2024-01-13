@@ -15,7 +15,7 @@ function Doc({ info }) {
     display: "flex",
     flexDirection: "column",
     position : "relative" , 
-    left:"5rem"
+    left:"2.5rem"
     // top : "40px" ,
     // right:"100px"
   };

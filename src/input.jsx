@@ -5,7 +5,6 @@ import { javascript } from '@codemirror/lang-javascript';
 import { autocompletion } from "@codemirror/autocomplete"
 import { monokai } from '@uiw/codemirror-theme-monokai';
 import Axios from "axios";
-import Button from '@mui/material/Button';
 import "./input.css";
 import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
@@ -18,7 +17,10 @@ function Input() {
     const navigate = useNavigate();
     let parameterObject
     const [docs, setDocs] = React.useState([])
-    const [question, setQuestion] = React.useState("")
+    const [question, setQuestion] = React.useState({
+        qn:"",
+        ans:""
+    })
 
     useEffect(() => {
         document.body.style.backgroundColor = "#000000"
@@ -29,7 +31,7 @@ function Input() {
         const parameterString = queryParams.get('param');
         if (parameterString) {
             parameterObject = JSON.parse(decodeURIComponent(atob(parameterString)));
-            setQuestion(parameterObject.qn)
+            setQuestion(parameterObject)
             console.log(parameterObject.qn);
         }
     }, [location.search])
@@ -57,7 +59,7 @@ function Input() {
     }
 
     function handleAnsSubmit(){
-        if(ans==parameterObject.ans){
+        if(ans==question.ans){
             navigate(`/`);
         }
         else{
@@ -108,7 +110,7 @@ function Input() {
             <Helmet>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Helmet>
-            <p className="mobile-paragraph">{question}</p>
+            <p className="mobile-paragraph">{question.qn}</p>
             <CodeMirror
                 value={value}
                 style={editorStyle}
