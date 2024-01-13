@@ -21,8 +21,10 @@ function Input() {
     const [question, setQuestion] = React.useState("")
 
     useEffect(() => {
-        document.body.style.backgroundColor = "#fff"
-        document.body.style.paddingLeft = "14rem";
+        document.body.style.backgroundColor = "#000000"
+        document.body.style.paddingLeft = "2rem";
+        document.body.style.paddingRight = "2rem";
+
         const queryParams = new URLSearchParams(location.search);
         const parameterString = queryParams.get('param');
         if (parameterString) {
@@ -64,7 +66,8 @@ function Input() {
     }
 
     const editorStyle = {
-        fontSize: "1.5rem"
+        fontSize: "1.5rem",
+        marginTop: "2rem"
     }
     const completions = [
         // { label: "panic", type: "keyword" },
@@ -105,10 +108,9 @@ function Input() {
             <Helmet>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Helmet>
-            <p>{question}</p>
+            <p className="mobile-paragraph">{question}</p>
             <CodeMirror
                 value={value}
-                width='60rem'
                 style={editorStyle}
                 theme={monokai}
                 extensions={[javascript({ jsx: true }), autocompletion({ override: [myCompletions] })
@@ -123,13 +125,16 @@ function Input() {
             </button>
 
             {/* <img src={require()} alt="" /> */}
-            <p>Submit Your Answer Here</p>
-            <input value={ans} onChange={handleAnsChange}></input>
-            <button onClick={handleAnsSubmit} variant="contained" type="submit" className="valorant-btn">
-                <span class="underlay">
-                    <span class="label">Submit</span>
-                </span>
-            </button>
+            
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <p className="mobile-paragraph">Submit Your Answer Here</p>
+                <input value={ans} onChange={handleAnsChange}></input>
+                <button onClick={handleAnsSubmit} variant="contained" type="submit" className="valorant-btn">
+                    <span class="underlay">
+                        <span class="label">Submit</span>
+                    </span>
+                </button>
+            </div>
 
 
             {docs.map((elem, index) => {
