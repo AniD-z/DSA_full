@@ -1,9 +1,9 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Fab from "@material-ui/core/Fab";
-import InfoRounded from "@material-ui/icons/InfoRounded";
+import { styled } from '@mui/system';
+import Fab from '@mui/material/Fab';
+import InfoRounded from '@mui/icons-material/InfoRounded';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = styled((theme) => ({
   margin: {
     margin: theme.spacing(1),
     position: "fixed",

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Info from "./info";
 import FloatingActionButtonSize from "./floatingButton";
 import { Link } from "react-router-dom";

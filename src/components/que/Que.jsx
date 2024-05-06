@@ -1,13 +1,13 @@
 import { React, useState, useEffect } from "react";
 import { FaMale, FaFemale, FaArrowLeft } from "react-icons/fa";
 import { ColorIndicator } from "../sorting-algorithm/colorIndicator/colorIndicator";
-import Button from "@material-ui/core/Button";
-import AlertDialog from "../../material-ui-components/alertDialog";
+import Button from '@mui/material/Button';
+import AlertDialog from "@mui/material/Dialog";
 import Warning from "../errorMessage/Warning";
 
 import "./que.css";
-import Information from "../../material-ui-components/information";
-import codeData from "./../../data";
+import Information from "../material-ui-components/information";
+import codeData from "../../data";
 import StartInformation from "./../startInformation/startInformation";
 const maxMembers = 10;
 const Que = () => {
@@ -26,10 +26,10 @@ const Que = () => {
   ]);
 
   //   Welcome
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   useEffect(() => {
-    setOpen(true);
+    setOpen(false);
   }, []);
 
   const handleClose = () => {
@@ -131,9 +131,11 @@ const Que = () => {
       />
       <ColorIndicator
         indicator={[
-          { name: "Queue", color: initialColor },
+          
+          { name: "Enqueue", color: initialColor },
           { name: "Male", color: maleColor },
           { name: "Female", color: femaleColor },
+        
           { name: "Enqueue", color: enqueueColor },
           { name: "Dequeue", color: dequeueColor },
         ]}
@@ -167,8 +169,8 @@ const Que = () => {
         <div className="controlls-container">
           <div className="d-flex align-items-center col-sm-2 controlHandler">
             <Button className="Button" onClick={enqueueMale}>
-              Enqueue Male
-            </Button>
+              Enqueue M
+        </Button>
           </div>
           <div className="d-flex align-items-center col-sm-2 controlHandler">
             <Button
@@ -176,7 +178,7 @@ const Que = () => {
               variant="outlined"
               onClick={enqueueFeMale}
             >
-              Enqueue Female
+              Enqueue F
             </Button>
           </div>
           <div className="d-flex align-items-center col-sm-2 controlHandler">

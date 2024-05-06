@@ -1,13 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
-import Editor from "../components/code-editor/editor";
-import Chip from "@material-ui/core/Chip";
+import { styled } from '@mui/system';
+import { AppBar, Tab, Tabs, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Editor from "../code-editor/editor";
+import Chip from '@mui/material/Chip';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -42,7 +39,7 @@ function a11yProps(index) {
   };
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = styled((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
