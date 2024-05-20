@@ -1,0 +1,30 @@
+/* Default styles */
+.node {
+  fill: rgb(72, 14, 207);
+  stroke: rgb(2, 1, 12);
+  font-size: 50px;
+}
+
+.link {
+  fill: rgba(241, 241, 241, 0);
+  stroke: rgb(7, 7, 7);
+  stroke-width: 1.5px;
+}
+
+.top {
+  margin-top: 100px;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .node {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Media query for laptop screens */
+@media (min-width: 769px) {
+  .node {
+    font-size: 25px; /* Reset font size for larger screens */
+  }
+}
