@@ -172,7 +172,7 @@ const SingleLinkedList = () => {
         />
       )}
 
-      <Information codeData={codeData.sll} />
+      {/* <Information codeData={codeData.sll} /> */}
       <div className="controlls-container">
         <div className="row justify-content-center">
           <div className="row justify-content-md-center">
