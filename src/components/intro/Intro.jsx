@@ -136,20 +136,20 @@ export const Intro = () => {
     <section className="intro-page">
       <div className="intro-start-box ff-tc">
         <div className="intro-quote ">
-          <div className="qt-txt qt-up">Enhancing your</div>
-          <div className="qt-emp">INGENUITY</div>
-          <div className="qt-txt qt-down">while playing!</div>
+          <div className="qt-txt qt-up">Elevate Your</div>
+          <div className="qt-emp">Problem-Solving</div>
+          <div className="qt-txt qt-down">While Escaping!</div>
         </div>
         <div className="intro-title intro-lap">
           <div className="title-up">
-            <div className="">SCHEMA</div>
+            <div className="">Algorithmic</div>
             <div className="line-up">
               <div className="line"></div>
               <div className="date-up "></div>
             </div>
           </div>
           <div className="title-down">
-            <div className="">VERSE!</div>
+            <div className="">Arcade</div>
             <div className="line-down">
               <div className="line"></div>
               <div className="date-down "></div>
@@ -161,21 +161,21 @@ export const Intro = () => {
           {/* <div className="title-left ot-red"> */}
           <div className="title-mob-box">
             <ul className="title-mob ul-left">
-              <li className="">S</li>
-              <li className="">C</li>
-              <li className="">H</li>
-              <li className="">E</li>
+              <li className="">A</li>
+              <li className="">L</li>
+              <li className="">G</li>
+              <li className="">O</li>
               <li className="">M</li>
               <li className="">A</li>
             </ul>
             {/* </div> */}
             {/* <div className="title-right ot-red text-black"> */}
             <ul className="title-mob ul-right">
-              <li>V</li>
-              <li>E</li>
+              <li>A</li>
               <li>R</li>
-              <li>S</li>
-              
+              <li>C</li>
+              <li>A</li>
+              <li>D</li>
               <li>E</li>
             </ul>
           </div>

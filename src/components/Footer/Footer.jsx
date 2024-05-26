@@ -13,7 +13,7 @@ function Footer() {
           >
            
             <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white ff-tc uppercase">
-              Schema Verse
+            Algorithmic Arcade
             </span>
           </a>
           <ul className="flex flex-wrap justify-center  items-center mb-6 text-sm font-medium text-black-500 sm:mb-0 dark:text-black-400">
@@ -67,9 +67,9 @@ function Footer() {
         </div>
         <hr className="my-6 border-black-200 sm:mx-auto dark:border-black-700 lg:my-8" />
         <span className="block text-sm text-black-500 text-center ">
-          © 2023{" "}
+          © 2024{" "}
           <a href="" className="hover:underline hover:text-white">
-            SV™
+            AA™
           </a>
           . All Rights Reserved.
         </span>
