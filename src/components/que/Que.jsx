@@ -9,6 +9,9 @@ import "./que.css";
 import Information from "../material-ui-components/information";
 import codeData from "../../data";
 import StartInformation from "./../startInformation/startInformation";
+
+import Confetti from 'react-confetti'
+
 const maxMembers = 10;
 
 const Que = () => {
@@ -34,10 +37,32 @@ const Que = () => {
   ];
 
   const [firstQueue, setFirstQueue] = useState(initialElements);
-  const [secondQueue, setSecondQueue] = useState([<FaMale className="male" />]);
+  const [secondQueue, setSecondQueue] = useState([
+  <FaMale className="male" />,
+  // <FaFemale className="female" />,
+  // <FaMale className="male" />,
+  // <FaFemale className="female" />,
+  // <FaMale className="male" />,
+  // <FaFemale className="female" />,
+  // <FaMale className="male" />,
+  // <FaFemale className="female" />,
+  // <FaMale className="male" />,
+  // <FaFemale className="female" />,
+  // <FaMale className="male" />,
+  // <FaFemale className="female" />,
 
-  // Welcome
-  const [open, setOpen] = useState(true);
+]);
+  const [done , setDone] = useState(false)
+
+  function hasNoConsecutiveMales(elements) {
+    for (let i = 0; i < elements.length - 1; i++) {
+      if (elements[i].props.className === "male" && elements[i + 1].props.className === "male") {
+        return false;
+      }
+    }
+    return true;
+  }
+    const [open, setOpen] = useState(true);
 
   useEffect(() => {
     setOpen(false);
@@ -129,15 +154,29 @@ const Que = () => {
 
   function rotateArray() {
     if (secondQueue.length === 0) {
-        return ; 
+      return;
     }
     const firstElement = secondQueue.shift(); // Remove the first element from the array
     secondQueue.push(firstElement); // Add the removed element to the end of the array
     setSecondQueue([...secondQueue]);
-}
+  }
+
+  function handleSubmit() {
+    if(secondQueue.length <12) {
+      setErrorMessage("Second Queue is not full");
+      setWarningOpen(true);
+    } else if (!hasNoConsecutiveMales(secondQueue)) {
+      setErrorMessage("Second Queue has consecutive males");
+      setWarningOpen(true);
+    } else{
+      setDone(true)
+      alert("You have successfully completed the level. Congrats!")
+    }
+  }
 
   return (
     <div className="container">
+      {done && <Confetti />}
       <AlertDialog
         open={open}
         handleClose={handleClose}
@@ -146,18 +185,17 @@ const Que = () => {
       />
       <ColorIndicator
         indicator={[
-          { name: "Enqueue", color: initialColor },
+          { name: "Element", color: initialColor },
           { name: "Male", color: maleColor },
           { name: "Female", color: femaleColor },
-          { name: "Enqueue", color: enqueueColor },
           { name: "Dequeue", color: dequeueColor },
         ]}
       />
       {/* <Information codeData={codeData.queue} /> */}
-      <div style={{position : "absolute" , left:"5rem" , bottom :"37rem"}}>
-            <Information codeData={codeData.queue} />
+      <div style={{ position: "absolute", left: "5rem", bottom: "37rem" }}>
+        <Information codeData={codeData.queue} />
 
-          </div>
+      </div>
       {/* Error Message */}
       <Warning
         open={warningOpen}
@@ -166,10 +204,10 @@ const Que = () => {
         content={errorMessage}
       />
       <hr />
-      <div style={{paddingLeft : "8%"}}>
+      <div style={{ paddingLeft: "8%" }}>
         <div className="queue">
           {firstQueue.map((val, i) => (
-            <div key={i} className={`queue-element first-queue-element ${ i != 0? "firstElem" : null}`}>{val}</div>
+            <div key={i} className={`queue-element first-queue-element ${i != 0 ? "firstElem" : null}`}>{val}</div>
           ))}
         </div>
         <div className="queue">
@@ -203,7 +241,7 @@ const Que = () => {
             </Button>
           </div>
           <div className="d-flex align-items-center col-sm-1 controlHandler">
-            <Button className="Button" variant="outlined" onClick={rotateArray}>
+            <Button className="Button" variant="outlined" onClick={handleSubmit}>
               Submit
             </Button>
           </div>

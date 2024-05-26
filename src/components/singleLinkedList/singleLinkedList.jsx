@@ -9,9 +9,11 @@ import AlertDialog from "@mui/material/Dialog";
 import Information from "../material-ui-components/information";
 import codeData from "../../data";
 import StartInformation from "../startInformation/startInformation";
+import Confetti from 'react-confetti'
 
 const SingleLinkedList = () => {
   const [sll, setSll] = useState();
+  const [done, setDonel] = useState(false);
   const [data, setData] = useState([]);
   const [open, setOpen] = useState(true);
   const [isStart, setIsStart] = useState(false);
@@ -127,7 +129,8 @@ const SingleLinkedList = () => {
 
     let bool = sll.checkAdjacentSumPrimes(sll.display());
     if (bool) {
-      alert("Sum of Adjacent Elements are Prime");
+      alert("You have successfully completed the level. Congrats!");
+      setDonel(true);
     } else {
       alert("Sum of Adjacent Elements are not Prime . Lenghth of Linked List must be greater than or equal to 7");
     }
@@ -144,6 +147,7 @@ const SingleLinkedList = () => {
       className="d-flex align-items-center justify-content-center"
       style={{ height: "100vh", width: "100vw" }}
     >
+      {done && <Confetti />}
       <div style={{ position: "absolute", left: "5rem", bottom: "37rem" }}>
         <Information codeData={codeData.sll} />
       </div>

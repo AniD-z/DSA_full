@@ -9,6 +9,7 @@ import AlertDialog from "@mui/material/Dialog";
 import Information from "../material-ui-components/information";
 import codeData from "../../data";
 import StartInformation from "../startInformation/startInformation";
+import Confetti from 'react-confetti'
 
 const AVLTrees = () => {
   const [considerTree, setConsiderTree] = useState(null);
@@ -17,6 +18,7 @@ const AVLTrees = () => {
   const [data, setData] = useState([]);
   const [toDel, setToDel] = useState("");
 
+  const [done, setDone] = useState(false);
   const [open, setOpen] = useState(true);
 
   useEffect(() => {
@@ -153,7 +155,14 @@ const AVLTrees = () => {
       considerTree.getRoot(),
       defaultTree.getRoot()
     );
-    alert(isSameStructure ? "Structures are the same" : "Structures are different");
+    if (isSameStructure) {
+      alert("Congratulations, Structures are same");
+      setDone(true);
+    }
+    else {
+      alert("Structures are different")
+    }
+
   };
 
   if (considerTree && !considerTree.getRoot()) {
@@ -170,6 +179,7 @@ const AVLTrees = () => {
         <Information codeData={codeData.avl} />
 
       </div>
+      {done && <Confetti />}
       <div className="top " style={{ height: "50em", width: "100vw" }}>
         <AlertDialog
           open={open}

@@ -11,6 +11,7 @@ import Warning from "../errorMessage/Warning";
 
 import codeData from "../../data";
 import StartInformation from "../startInformation/startInformation";
+import Confetti from 'react-confetti'
 
 const InitialElements = 15;
 
@@ -22,8 +23,8 @@ const Arr = () => {
 
   const [noElement, setNoElement] = useState(InitialElements - 1);
   // arrat for storing element
-  const [elements, setElements] = useState([4,3,7,1,8]);
-  const [count, setCount] = useState(8);
+  const [elements, setElements] = useState([4, 3, 7, 1, 8]);
+  const [count, setCount] = useState(2);
 
   // index
   const [index, setIndex] = useState("");
@@ -63,6 +64,7 @@ const Arr = () => {
 
   // Toggle Welcom
   const [open, setOpen] = useState(false);
+  const [done, setDone] = useState(false);
 
   useEffect(() => {
     setOpen(false);
@@ -139,6 +141,10 @@ const Arr = () => {
     } else {
       addElement(parseInt(index));
       setCount(count - 1);
+      if(count === 0){
+        alert("You have run out of moves.")
+        window.location.reload()
+      }
       setNewElement("");
       setIndex("");
     }
@@ -178,6 +184,10 @@ const Arr = () => {
     } else {
       deleteFromIndex(parseInt(deleteIndex));
       setCount(count - 1);
+      if(count === 0){
+        alert("You have run out of moves.")
+        window.location.reload()
+      }
       setDeleteIndex("");
     }
   };
@@ -245,6 +255,16 @@ const Arr = () => {
   //   //   // console.log(max);
   //   // }, 150 * delay);
   // };
+  function handleSubmit() {
+    if(JSON.stringify(elements) === JSON.stringify([1,3,4,7,8])){
+      alert("Congratulations! You have successfully completed the task.")
+      setDone(true);
+    }
+    else{
+      alert("Incorrect Sequence.")
+    }
+  }
+  
   return (
     <div className="container">
       <AlertDialog
@@ -253,10 +273,11 @@ const Arr = () => {
         title="Welcome to Array"
         content="An Array is already been created, from the below controllers you can insert value at particular index, delete value from a particular index, find the minimum value, maximum value and also remove duplicate elements."
       />
-          <div style={{position : "absolute" , left:"5rem" , bottom :"37rem"}}>
-            <Information codeData={codeData.array} />
+      <div style={{ position: "absolute", left: "5rem", bottom: "37rem" }}>
+        <Information codeData={codeData.array} />
 
-          </div>
+      </div>
+      {done && <Confetti />}
       {/* Erroe Message */}
       <Warning
         open={warningOpen}
@@ -276,12 +297,12 @@ const Arr = () => {
       />
       <hr />
       <h2>Moves Left : {count}</h2>
-      <div style={{marginTop : "-8%"}} className=" array-container d-flex align-items-center justify-content-center">
+      <div style={{ marginTop: "-8%" }} className=" array-container d-flex align-items-center justify-content-center">
         <div className="array d-flex">
           {elements.map((value, idx) => {
             if (value != null)
               return (
-                
+
                 <ArrayElement
                   elementClass="array-element"
                   key={idx}
@@ -351,15 +372,15 @@ const Arr = () => {
               Find Max
             </Button>
           </div>
-          {/* <div className="col-sm-2">
+          <div className="col-sm-2">
             <Button
               className="Button"
               varient="outlined"
-              onClick={removeDuplicate}
+              onClick={handleSubmit}
             >
-              Remove Duplicate
+              SUBMIT
             </Button>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

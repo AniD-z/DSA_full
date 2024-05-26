@@ -8,13 +8,16 @@ import codeData from "../../data";
 import StartInformation from "../startInformation/startInformation";
 import { positions } from "@mui/system";
 
+import Confetti from 'react-confetti'
+
 const InitialElements = 5;
 const maxElements = 10;
 
 const Stack = () => {
   const [stacks, setStacks] = useState([[4, 3, 2, 1], [], []]);
+  const [done , setDone] = useState(false)
   const [open, setOpen] = useState(false);
-  const [count, setCount] = useState(16);
+  const [count, setCount] = useState(1);
   const [errorMessage, setErrorMessage] = useState("");
   const [warningOpen, setWarningOpen] = useState(false);
 
@@ -87,9 +90,31 @@ const Stack = () => {
     popElement(st1);
     pushElement(st2, elementToMove);
     setCount(count - 1);
+    if(count === 0){
+      alert("You have run out of moves.")
+      window.location.reload()
+    }
   };
+
+  function isArray4321(arr) {
+    const targetArray = [4, 3, 2, 1];
+    return arr.length === targetArray.length && arr.every((value, index) => value === targetArray[index]);
+  }
+  
+
+  const handleSubmit = () => {
+    if(isArray4321(stacks[2])){
+      setDone(true)
+      alert("You have successfully completed the level. Congrats!")
+    }
+    else{
+      alert("You have not moved all elements to Stack 3")
+    
+    }
+  }
   return (
     <>
+      {done && <Confetti />}
       <AlertDialog
         open={open}
         handleClose={handleClose}
@@ -126,7 +151,7 @@ const Stack = () => {
             <Button className="Button" variant="outlined" onClick={() => push(1, 2)}>Push Stack 2 to Stack 3</Button>
             <Button className="Button" variant="outlined" onClick={() => push(2, 0)}>Push Stack 3 to Stack 1</Button>
             <Button className="Button" variant="outlined" onClick={() => push(2, 1)}>Push Stack 3 to Stack 2</Button>
-            <Button className="hello" variant="outlined" onClick={() => pass}>SUBMIT</Button>
+            <Button className="hello" variant="outlined" onClick={handleSubmit}>SUBMIT</Button>
           </div>
           <div style={{position : "absolute" , left:"5rem" , bottom :"37rem"}}>
             <Information codeData={codeData.stack} />
