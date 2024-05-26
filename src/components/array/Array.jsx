@@ -22,7 +22,8 @@ const Arr = () => {
 
   const [noElement, setNoElement] = useState(InitialElements - 1);
   // arrat for storing element
-  const [elements, setElements] = useState([]);
+  const [elements, setElements] = useState([4,3,7,1,8]);
+  const [count, setCount] = useState(8);
 
   // index
   const [index, setIndex] = useState("");
@@ -43,22 +44,22 @@ const Arr = () => {
   };
 
   // generate random elements
-  const generateRandomElements = (start, end) => {
-    return Math.floor(Math.random() * (end - start - 1) + start);
-  };
+  // const generateRandomElements = (start, end) => {
+  //   return Math.floor(Math.random() * (end - start - 1) + start);
+  // };
   //   generate array of random elements
-  const generateRandomArray = () => {
-    const temp = [];
-    for (let i = 0; i <= noElement; i++) {
-      temp[i] = generateRandomElements(10, 100);
-    }
-    setElements(temp);
-  };
+  // const generateRandomArray = () => {
+  //   const temp = [];
+  //   for (let i = 0; i <= noElement; i++) {
+  //     temp[i] = generateRandomElements(10, 100);
+  //   }
+  //   setElements(temp);
+  // };
 
   //   Call once while loading page
-  useEffect(() => {
-    generateRandomArray();
-  }, []);
+  // useEffect(() => {
+  //   generateRandomArray();
+  // }, []);
 
   // Toggle Welcom
   const [open, setOpen] = useState(false);
@@ -137,6 +138,7 @@ const Arr = () => {
       setIndex("");
     } else {
       addElement(parseInt(index));
+      setCount(count - 1);
       setNewElement("");
       setIndex("");
     }
@@ -175,6 +177,7 @@ const Arr = () => {
       setDeleteIndex("");
     } else {
       deleteFromIndex(parseInt(deleteIndex));
+      setCount(count - 1);
       setDeleteIndex("");
     }
   };
@@ -217,31 +220,31 @@ const Arr = () => {
   };
 
   // Remove Duplicate
-  const removeDuplicate = () => {
-    let i, j;
-    let delay = 1;
-    for (i = 0; i <= noElement; i++) {
-      for (j = i + 1; j <= noElement; j++) {
-        if (elements[j] === elements[i]) {
-          heighlightAction(i, 10, "Green");
-          heighlightAction(j, 5, "Black");
-          let delidx = j;
-          setTimeout(() => {
-            setElements((oldItems) => {
-              return [...oldItems.filter((ele, idx) => idx !== delidx)];
-            });
-            setNoElement(noElement - 1);
-          }, 150 * 5);
-        }
-        delay++;
-      }
-    }
+  // const removeDuplicate = () => {
+  //   let i, j;
+  //   let delay = 1;
+  //   for (i = 0; i <= noElement; i++) {
+  //     for (j = i + 1; j <= noElement; j++) {
+  //       if (elements[j] === elements[i]) {
+  //         heighlightAction(i, 10, "Green");
+  //         heighlightAction(j, 5, "Black");
+  //         let delidx = j;
+  //         setTimeout(() => {
+  //           setElements((oldItems) => {
+  //             return [...oldItems.filter((ele, idx) => idx !== delidx)];
+  //           });
+  //           setNoElement(noElement - 1);
+  //         }, 150 * 5);
+  //       }
+  //       delay++;
+  //     }
+  //   }
 
-    // setTimeout(() => {
-    //   heighlightAction(idx, delay + 20, maxElementColor);
-    //   // console.log(max);
-    // }, 150 * delay);
-  };
+  //   // setTimeout(() => {
+  //   //   heighlightAction(idx, delay + 20, maxElementColor);
+  //   //   // console.log(max);
+  //   // }, 150 * delay);
+  // };
   return (
     <div className="container">
       <AlertDialog
@@ -269,11 +272,13 @@ const Arr = () => {
         ]}
       />
       <hr />
-      <div className=" array-container d-flex align-items-center justify-content-center">
+      <h2>Moves Left : {count}</h2>
+      <div style={{marginTop : "-8%"}} className=" array-container d-flex align-items-center justify-content-center">
         <div className="array d-flex">
           {elements.map((value, idx) => {
             if (value != null)
               return (
+                
                 <ArrayElement
                   elementClass="array-element"
                   key={idx}
@@ -343,7 +348,7 @@ const Arr = () => {
               Find Max
             </Button>
           </div>
-          <div className="col-sm-2">
+          {/* <div className="col-sm-2">
             <Button
               className="Button"
               varient="outlined"
@@ -351,7 +356,7 @@ const Arr = () => {
             >
               Remove Duplicate
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -11,8 +11,9 @@ const InitialElements = 5;
 const maxElements = 10;
 
 const Stack = () => {
-  const [stacks, setStacks] = useState([[5,4,3,2,1] , [] , []]); 
+  const [stacks, setStacks] = useState([[4,3,2,1] , [] , []]); 
   const [open, setOpen] = useState(false);
+  const [count, setCount] = useState(16);
   const [errorMessage, setErrorMessage] = useState("");
   const [warningOpen, setWarningOpen] = useState(false);
 
@@ -72,6 +73,7 @@ const Stack = () => {
   };
 
   const push = (st1, st2) => {
+    console.log(stacks)
     const elementToMove = stacks[st1][stacks[st1].length - 1];
     if(stacks[st2].length !== 0){
       let secondTopElement = stacks[st2][stacks[st2].length - 1];
@@ -83,6 +85,7 @@ const Stack = () => {
     }
     popElement(st1);
     pushElement(st2, elementToMove);
+    setCount(count - 1);
   };
   return (
     <>
@@ -112,6 +115,7 @@ const Stack = () => {
             ))}
           </div>
         ))}
+        <h3 style={{marginLeft:"2%"}}> Moves Left : {count}</h3>
         <hr />
         <div className="controlls-container">
           <div className="col-sm-12 controlHandler">
@@ -119,8 +123,9 @@ const Stack = () => {
             <Button className="Button" variant="outlined" onClick={() => push(0 , 2)}>Push Stack 1 to Stack 3</Button>
             <Button className="Button" variant="outlined" onClick={() => push(1 , 0 )}>Push Stack 2 to Stack 1</Button>
             <Button className="Button" variant="outlined" onClick={() => push(1 , 2)}>Push Stack 2 to Stack 3</Button>
-            <Button className="Button" variant="outlined" onClick={() => push(1 , 2)}>Push Stack 3 to Stack 1</Button>
-            <Button className="Button" variant="outlined" onClick={() => push(1 , 2)}>Push Stack 3 to Stack 2</Button>
+            <Button className="Button" variant="outlined" onClick={() => push(2 , 0)}>Push Stack 3 to Stack 1</Button>
+            <Button className="Button" variant="outlined" onClick={() => push(2 , 1)}>Push Stack 3 to Stack 2</Button>
+            <Button className="hello" variant="outlined" onClick={() => pass}>SUBMIT</Button>
           </div>
 
         </div>

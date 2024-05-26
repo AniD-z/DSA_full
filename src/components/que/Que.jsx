@@ -10,6 +10,7 @@ import Information from "../material-ui-components/information";
 import codeData from "../../data";
 import StartInformation from "./../startInformation/startInformation";
 const maxMembers = 10;
+
 const Que = () => {
   const initialColor = "rgb(63, 81, 181)";
   const maleColor = "#FBEAFF";
@@ -17,15 +18,25 @@ const Que = () => {
   const dequeueColor = "red";
   const enqueueColor = "#250B65";
 
-  const [elements, setElements] = useState([
+  const initialElements = [
+    // <FaMale className="male" />,
+    <FaMale className="male" />,
     <FaMale className="male" />,
     <FaFemale className="female" />,
     <FaMale className="male" />,
     <FaFemale className="female" />,
+    <FaFemale className="female" />,
+    <FaFemale className="female" />,
     <FaMale className="male" />,
-  ]);
+    <FaFemale className="female" />,
+    <FaMale className="male" />,
+    <FaMale className="male" />,
+  ];
 
-  //   Welcome
+  const [firstQueue, setFirstQueue] = useState(initialElements);
+  const [secondQueue, setSecondQueue] = useState([<FaMale className="male" />]);
+
+  // Welcome
   const [open, setOpen] = useState(true);
 
   useEffect(() => {
@@ -46,80 +57,84 @@ const Que = () => {
     setErrorMessage("");
   };
 
-  const heighlightAction = (index, delay, color) => {
-    const bar = document.getElementsByClassName("queue-element");
+  const heighlightAction = (index, delay, color, queueType) => {
+    const bar = document.getElementsByClassName(queueType);
     setTimeout(() => {
       bar[index].style.backgroundColor = color;
     }, delay);
     setTimeout(() => {
-      bar[index].style.backgroundColor = color;
       bar[index].style.backgroundColor = initialColor;
     }, 150 * delay);
   };
 
-  //   Male
+  // Enqueue Male to first queue
   const enqueueMale = () => {
-    let delay = 1;
     let i;
-    for (i = 0; i < elements.length; i++) {
+    for (i = 0; i < firstQueue.length; i++) {
       // heighlightAction(i, delay++, "red");
-      delay++;
     }
 
-    if (i < maxMembers) {
+    if (i < 10) { // Assuming max length of first queue is 10
       setTimeout(() => {
-        heighlightAction(i, 3, enqueueColor);
+        heighlightAction(i, 3, enqueueColor, "first-queue-element");
 
-        setElements((oldItems) => {
-          return [...oldItems, <FaMale className="male" />];
+        setFirstQueue((oldItems) => {
+          return [...oldItems, <FaMale className="male first-queue-element" />];
         });
-        //   }
       }, 150 * 2.5);
     } else {
-      setErrorMessage("Queue is Full");
-      setWarningOpen(!warningOpen);
+      setErrorMessage("First Queue is Full");
+      setWarningOpen(true);
     }
   };
 
-  //   Female
+  // Enqueue Female to first queue
   const enqueueFeMale = () => {
-    let delay = 1;
     let i;
-    for (i = 0; i < elements.length; i++) {
+    for (i = 0; i < firstQueue.length; i++) {
       // heighlightAction(i, delay++, "red");
-      delay++;
     }
-    if (i < maxMembers) {
+    if (i < 10) { // Assuming max length of first queue is 10
       setTimeout(() => {
-        heighlightAction(i, 3, enqueueColor);
+        heighlightAction(i, 3, enqueueColor, "first-queue-element");
 
-        setElements((oldItems) => {
-          return [...oldItems, <FaFemale className="female" />];
+        setFirstQueue((oldItems) => {
+          return [...oldItems, <FaFemale className="female first-queue-element" />];
         });
-        //   }
       }, 150 * 2.5);
     } else {
-      setErrorMessage("Queue is Full");
-      setWarningOpen(!warningOpen);
+      setErrorMessage("First Queue is Full");
+      setWarningOpen(true);
     }
   };
 
-  //   Dequeue
   const deQueue = () => {
-    if (elements.length - 1 >= 0) {
-      heighlightAction(0, 2, dequeueColor);
+    if (firstQueue.length > 0) {
+      heighlightAction(0, 2, dequeueColor, "first-queue-element");
       setTimeout(() => {
-        // setTimeout(() => {
-        setElements((oldItems) => {
-          return [...oldItems.filter((ele, i) => i !== 0)];
-        });
-        // }, 400 * 2);
-      }, 200 * 2);
+        const dequeuedElement = firstQueue[0];
+        setFirstQueue((oldItems) => oldItems.slice(1));
+        if (secondQueue.length < 12) { // Assuming max length of second queue is 10
+          setSecondQueue((oldItems) => [...oldItems, dequeuedElement]);
+        } else {
+          setErrorMessage("Second Queue is Full");
+          setWarningOpen(true);
+        }
+      }, 300);
     } else {
-      setErrorMessage("Queue is Empty");
-      setWarningOpen(!warningOpen);
+      setErrorMessage("First Queue is Empty");
+      setWarningOpen(true);
     }
   };
+
+  function rotateArray() {
+    if (secondQueue.length === 0) {
+        return ; 
+    }
+    const firstElement = secondQueue.shift(); // Remove the first element from the array
+    secondQueue.push(firstElement); // Add the removed element to the end of the array
+    setSecondQueue([...secondQueue]);
+}
 
   return (
     <div className="container">
@@ -131,18 +146,15 @@ const Que = () => {
       />
       <ColorIndicator
         indicator={[
-          
           { name: "Enqueue", color: initialColor },
           { name: "Male", color: maleColor },
           { name: "Female", color: femaleColor },
-        
           { name: "Enqueue", color: enqueueColor },
           { name: "Dequeue", color: dequeueColor },
         ]}
       />
-
-      <Information codeData={codeData.queue} />
-      {/* Erroe Message */}
+      {/* <Information codeData={codeData.queue} /> */}
+      {/* Error Message */}
       <Warning
         open={warningOpen}
         handleClose={handleWarning}
@@ -150,27 +162,22 @@ const Que = () => {
         content={errorMessage}
       />
       <hr />
-      <div className="container m-0 queue-container d-flex align-items-center justify-content-center">
-        <div class="queue">
-          {elements.map((val, i) => {
-            let arrow;
-
-            if (i < elements.length - 1) {
-              arrow = <FaArrowLeft />;
-            }
-            return (
-              <>
-                <div className="queue-element">{val}</div>
-                <div className="queue-pointer">{arrow}</div>
-              </>
-            );
-          })}
+      <div style={{paddingLeft : "8%"}}>
+        <div className="queue">
+          {firstQueue.map((val, i) => (
+            <div key={i} className={`queue-element first-queue-element ${ i != 0? "firstElem" : null}`}>{val}</div>
+          ))}
+        </div>
+        <div className="queue">
+          {secondQueue.map((val, i) => (
+            <div key={i} className="queue-element second-queue-element">{val}</div>
+          ))}
         </div>
         <div className="controlls-container">
-          <div className="d-flex align-items-center col-sm-2 controlHandler">
+          {/* <div className="d-flex align-items-center col-sm-2 controlHandler">
             <Button className="Button" onClick={enqueueMale}>
-              Enqueue M
-        </Button>
+              Enqueue Male
+            </Button>
           </div>
           <div className="d-flex align-items-center col-sm-2 controlHandler">
             <Button
@@ -178,12 +185,22 @@ const Que = () => {
               variant="outlined"
               onClick={enqueueFeMale}
             >
-              Enqueue F
+              Enqueue Female
             </Button>
-          </div>
-          <div className="d-flex align-items-center col-sm-2 controlHandler">
+          </div> */}
+          <div className="d-flex align-items-center col-sm-1 controlHandler">
             <Button className="Button" variant="outlined" onClick={deQueue}>
               Dequeue
+            </Button>
+          </div>
+          <div className="d-flex align-items-center col-sm-1 controlHandler">
+            <Button className="Button" variant="outlined" onClick={rotateArray}>
+              Rotate
+            </Button>
+          </div>
+          <div className="d-flex align-items-center col-sm-1 controlHandler">
+            <Button className="Button" variant="outlined" onClick={rotateArray}>
+              Submit
             </Button>
           </div>
         </div>
@@ -191,5 +208,6 @@ const Que = () => {
     </div>
   );
 };
+
 
 export default Que;

@@ -1,4 +1,4 @@
-/* Base styles */
+/* Base styles
 .queue-container {
   height: 50vh;
 }
@@ -33,10 +33,9 @@
   font-size: 45px;
 }
 
-/* Media queries for laptop screens */
 @media (min-width: 768px) {
   .queue-container {
-    height: auto; /* Adjust height as needed */
+    height: auto;
   }
 
   .queue {
@@ -44,31 +43,80 @@
   }
 
   .queue-element {
-    margin: 5px; /* Add margin between elements */
+    margin: 5px; 
   }
 
   .queue-pointer {
-    font-size: 35px; /* Increase font size for better visibility */
+    font-size: 35px; 
   }
 }
 
-/* Media queries for mobile screens */
 @media (max-width: 767px) {
   .queue-container {
-    height: auto; /* Adjust height as needed */
+    height: auto; 
   }
 
   .queue {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column; 
     align-items: center;
-    margin-top: 20px; /* Reduce top margin */
+    margin-top: 20px; 
   }
 
   .queue-element {
-    margin: 5px 0; /* Add margin between elements */
+    margin: 5px 0; 
   }
 
   .queue-pointer {
-    font-size: 20px; /* Decrease font size for better fit */
+    font-size: 20px; 
   }
+} */
+.queue-container {
+  height: 50vh;
+}
+
+.queue {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.queue-element {
+  background-color: rgb(63, 81, 181);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  width: 65px;
+  border-radius: 100%;
+}
+
+.firstElem {
+  background-color: black;
+  color:black;
+}
+
+.firstElem * {
+  color: black !important; /* Ensure all text inside the div is black */
+  background-color: black !important; /* Ensure all background inside the div is black */
+  fill: black !important; /* Ensure all SVG fill colors are black */
+  stroke: black !important; /* Ensure all SVG stroke colors are black */
+  border-color: black !important; /* Ensure all borders are black */
+}
+
+.queue-pointer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.male {
+  color: #fbeaff;
+  font-size: 45px;
+}
+
+.female {
+  color: #fbeaff;
+  font-size: 45px;
 }

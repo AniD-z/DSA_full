@@ -51,3 +51,8 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+.hello{
+  color:#eae7fa !important;
+  background-color: rgb(67, 211, 67) !important;
+}
