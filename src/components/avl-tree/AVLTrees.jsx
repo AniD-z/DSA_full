@@ -30,6 +30,10 @@ const AVLTrees = () => {
 
   const create = () => {
     let rootvalue = parseInt(prompt("Enter the root value"));
+    if (rootvalue > 10 || rootvalue < 1) {
+      alert("Please Enter a value between 1 to 10")
+      return;
+    }
     if (!isNaN(rootvalue)) {
       const temp = new AVLTree(rootvalue);
       setConsiderTree(temp);
@@ -76,7 +80,7 @@ const AVLTrees = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(value > 10 || value < 1){
+    if (value > 10 || value < 1) {
       alert("Please Enter a value between 1 to 10")
       return;
     }
@@ -105,7 +109,7 @@ const AVLTrees = () => {
   const handleDelete = (e) => {
     try {
       e.preventDefault();
-      if(value > 10 || value < 1){
+      if (value > 10 || value < 1) {
         alert("Please Enter a value between 1 to 10")
         return;
       }
@@ -119,7 +123,7 @@ const AVLTrees = () => {
     } catch (e) {
       alert(
         "An Algorithamic Error Occured, please perform another operation : Error discription :" +
-          e
+        e
       );
     }
 
@@ -161,6 +165,11 @@ const AVLTrees = () => {
       style={{ height: "100vh", width: "100vw" }}
       className="d-flex align-items-center justify-content-center"
     >
+
+      <div style={{ position: "absolute", left: "5rem", bottom: "37rem" }}>
+        <Information codeData={codeData.avl} />
+
+      </div>
       <div className="top " style={{ height: "50em", width: "100vw" }}>
         <AlertDialog
           open={open}
@@ -183,7 +192,7 @@ const AVLTrees = () => {
           />
         )}
 
-        <Information codeData={codeData.avl} />
+        {/* <Information codeData={codeData.avl} /> */}
         <div className="controlls-container w-100">
           {!isCreated && (
             <div className="col-1 d-flex align-items-center controlHandler">
@@ -236,7 +245,7 @@ const AVLTrees = () => {
               {isCreated && (
                 <form onSubmit={handleDelete}>
                   <div className="row">
-                    <div style={{width : "24rem"}} className="col">
+                    <div style={{ width: "24rem" }} className="col">
                       <input
                         placeholder="Node to Delete"
                         onChange={deleteValHandler}
@@ -259,14 +268,14 @@ const AVLTrees = () => {
             </div>
             <div className="col d-flex align-items-center controlHandler">
               {isCreated && (
-                      <Button
-                        type="submit"
-                        className="Button"
-                        varient="outlined"
-                        onClick={handleCompare}
-                      >
-                        Compare
-                      </Button>
+                <Button
+                  type="submit"
+                  className="Button"
+                  varient="outlined"
+                  onClick={handleCompare}
+                >
+                  Compare
+                </Button>
               )}
             </div>
           </div>

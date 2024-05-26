@@ -10,7 +10,6 @@ import Information from "../material-ui-components/information";
 import codeData from "../../data";
 import StartInformation from "../startInformation/startInformation";
 
-
 const SingleLinkedList = () => {
   const [sll, setSll] = useState();
   const [data, setData] = useState([]);
@@ -27,7 +26,14 @@ const SingleLinkedList = () => {
   const [deleteIndex, setDeleteIndex] = useState("");
 
   useEffect(() => {
-    setOpen(false);
+    // Initialize the linked list with elements 7, 3, 5, 6, 2, 8, 1
+    const initialValues = [7, 3, 5, 6, 2, 8, 1];
+    const temp = new SLinkedList(initialValues[0]);
+    initialValues.slice(1).forEach(value => temp.insertBack(value));
+    setSll(temp);
+    setIsStart(true);
+    setData(refactor(temp.display()));
+    setOpen(false); // Close the initial dialog
   }, []);
 
   const handleClose = () => {
@@ -35,23 +41,11 @@ const SingleLinkedList = () => {
     setOpen(false);
   };
 
-  const createHandler = () => {
-    let head = parseInt(prompt("Enter Head Value"));
-    if (!isNaN(head)) {
-      const temp = new SLinkedList(head);
-      setSll(temp);
-      setIsStart(true);
-      setData(temp.display());
-    }
-    forceRerender();
-  };
-
-  // ---------------------------------------------
-
   const insertBackChangeHandler = (e) => {
     let data = e.target.value;
     setInsertBack(data);
   };
+
   const insertBackHandler = (e) => {
     if (e) e.preventDefault();
     sll.insertBack(insertBack);
@@ -59,39 +53,38 @@ const SingleLinkedList = () => {
     forceRerender();
   };
 
-  // ---------------------------------------------
-
   const insertFrontChangeHandler = (e) => {
     let data = e.target.value;
     setInsertFront(data);
   };
+
   const insertFrontHandler = (e) => {
     e.preventDefault();
     sll.insertFront(insertFront);
     updateData();
   };
 
-  // ---------------------------------------------
-
   const insertAfterValueChangeHandler = (e) => {
     let data = e.target.value;
     setInsertAfterValue(data);
   };
+
   const insertAfterIndexChangeHandler = (e) => {
     let data = e.target.value;
     setInsertAfterIdx(data);
   };
+
   const insertAfterHandler = (e) => {
     e.preventDefault();
     sll.insertAt(insertAfterIdx, insertAfterValue);
     updateData();
   };
 
-  // ---------------------------------------------
   const deleteIndexChangeHandler = (e) => {
     let data = e.target.value;
     setDeleteIndex(data);
   };
+
   const deleteIndexHandler = (e) => {
     try {
       e.preventDefault();
@@ -102,8 +95,6 @@ const SingleLinkedList = () => {
     }
   };
 
-  // ---------------------------------------------
-  // ------------------------------------------------------------------------------------
   class rNode {
     constructor(data) {
       this.name = data;
@@ -121,8 +112,6 @@ const SingleLinkedList = () => {
     }
   };
 
-  // ------------------------------------------------------------------------------------
-
   const updateData = () => {
     setInsertBack("");
     setInsertFront("");
@@ -130,12 +119,19 @@ const SingleLinkedList = () => {
     setInsertAfterIdx("");
     setDeleteIndex("");
     setData(refactor(sll.display()));
-    // forceRerender();
   };
 
   const reverse = () => {
-    sll.reverse(null, sll.display()); // display since it return head;
-    updateData();
+    // sll.reverse(null, sll.display());
+    // updateData();
+
+    let bool = sll.checkAdjacentSumPrimes(sll.display());
+    if (bool) {
+      alert("Sum of Adjacent Elements are Prime");
+    } else {
+      alert("Sum of Adjacent Elements are not Prime . Lenghth of Linked List must be greater than or equal to 7");
+    }
+
   };
 
   const clearHandler = () => {
@@ -148,11 +144,14 @@ const SingleLinkedList = () => {
       className="d-flex align-items-center justify-content-center"
       style={{ height: "100vh", width: "100vw" }}
     >
+      <div style={{ position: "absolute", left: "5rem", bottom: "37rem" }}>
+        <Information codeData={codeData.sll} />
+      </div>
       <AlertDialog
         open={open}
         handleClose={handleClose}
         title="Welcome to Single Linked List"
-        content="You will see a empty screen, from the below controller first you have to create one Linked List, by clicking create, after you create Linked List, all options in controller will be enabled, you can insert at back, insert front, insert after the given index, delete at index, clear data and reverse all data  of linked list, "
+        content="You will see an empty screen, from the below controller first you have to create one Linked List, by clicking create, after you create Linked List, all options in controller will be enabled, you can insert at back, insert front, insert after the given index, delete at index, clear data and reverse all data of linked list."
       />
 
       {sll && data && (
@@ -172,21 +171,9 @@ const SingleLinkedList = () => {
         />
       )}
 
-      {/* <Information codeData={codeData.sll} /> */}
       <div className="controlls-container">
         <div className="row justify-content-center">
           <div className="row justify-content-md-center">
-            {!isStart && (
-              <div className="col-1">
-                <Button
-                  onClick={createHandler}
-                  className="Button"
-                  variant="outlined"
-                >
-                  Create
-                </Button>
-              </div>
-            )}
             {isStart && (
               <div className="col-3">
                 <form onSubmit={insertBackHandler}>
@@ -243,7 +230,7 @@ const SingleLinkedList = () => {
               <div className=" col-4">
                 <form onSubmit={insertAfterHandler}>
                   <div className="align-items-center controlHandler">
-                    <div className=" col-4 mr-1">
+                    <div className=" col-4 mr-4">
                       <input
                         onChange={insertAfterIndexChangeHandler}
                         value={insertAfterIdx}
@@ -251,7 +238,7 @@ const SingleLinkedList = () => {
                         placeholder="Index"
                       ></input>
                     </div>
-                    <div className="col-4 ml-1">
+                    <div className="col-4 mr-4">
                       <input
                         onChange={insertAfterValueChangeHandler}
                         value={insertAfterValue}
@@ -277,7 +264,7 @@ const SingleLinkedList = () => {
               <div className="mt-3 col-3">
                 <form onSubmit={deleteIndexHandler}>
                   <div className="align-items-center controlHandler">
-                    <div className="col-8">
+                    <div className="col-6">
                       <input
                         onChange={deleteIndexChangeHandler}
                         value={deleteIndex}
@@ -285,7 +272,7 @@ const SingleLinkedList = () => {
                         placeholder="Value"
                       ></input>
                     </div>
-                    <div className="col-2">
+                    <div className="col-1">
                       <Button
                         className="Button"
                         variant="outlined"
@@ -299,22 +286,11 @@ const SingleLinkedList = () => {
               </div>
             )}
 
-            {isStart && (
-              <div className="text-center mt-3 col-2">
-                <Button
-                  className="Button"
-                  variant="outlined"
-                  onClick={clearHandler}
-                >
-                  Clear
-                </Button>
-              </div>
-            )}
 
             {isStart && (
               <div className="text-center  mt-3 col-1">
                 <Button onClick={reverse} className="Button" variant="outlined">
-                  Reverse
+                  Submit
                 </Button>
               </div>
             )}
@@ -324,5 +300,6 @@ const SingleLinkedList = () => {
     </div>
   );
 };
+
 
 export default SingleLinkedList;

@@ -62,23 +62,23 @@ export default function SimpleTabs({ codeData }) {
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Tab label="C++" {...a11yProps(0)} />
-          <Tab label="Java" {...a11yProps(1)} />
-          <Tab label="Python" {...a11yProps(2)} />
+          {/* <Tab label="C++" {...a11yProps(0)} /> */}
+          <Tab label="Java" {...a11yProps(0)} />
+          {/* <Tab label="Python" {...a11yProps(2)} /> */}
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
+      {/* <TabPanel value={value} index={0}>
         <Editor language="c_cpp" value={codeData.cpp} theme="solarized_light" />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
+      </TabPanel> */}
+      <TabPanel value={value} index={0}>
         <Editor language="java" value={codeData.java} />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Chip
+        {/* <Chip
           className="mb-3"
           color="primary"
           label="you can run your Python code"
-        />
+        /> */}
         <Editor
           language="python"
           value={codeData.python}

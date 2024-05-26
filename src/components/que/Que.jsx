@@ -154,6 +154,10 @@ const Que = () => {
         ]}
       />
       {/* <Information codeData={codeData.queue} /> */}
+      <div style={{position : "absolute" , left:"5rem" , bottom :"37rem"}}>
+            <Information codeData={codeData.queue} />
+
+          </div>
       {/* Error Message */}
       <Warning
         open={warningOpen}

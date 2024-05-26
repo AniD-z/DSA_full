@@ -253,7 +253,10 @@ const Arr = () => {
         title="Welcome to Array"
         content="An Array is already been created, from the below controllers you can insert value at particular index, delete value from a particular index, find the minimum value, maximum value and also remove duplicate elements."
       />
+          <div style={{position : "absolute" , left:"5rem" , bottom :"37rem"}}>
+            <Information codeData={codeData.array} />
 
+          </div>
       {/* Erroe Message */}
       <Warning
         open={warningOpen}

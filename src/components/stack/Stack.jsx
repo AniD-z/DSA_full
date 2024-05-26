@@ -6,12 +6,13 @@ import "./stack.css";
 import Warning from "../errorMessage/Warning";
 import codeData from "../../data";
 import StartInformation from "../startInformation/startInformation";
+import { positions } from "@mui/system";
 
 const InitialElements = 5;
 const maxElements = 10;
 
 const Stack = () => {
-  const [stacks, setStacks] = useState([[4,3,2,1] , [] , []]); 
+  const [stacks, setStacks] = useState([[4, 3, 2, 1], [], []]);
   const [open, setOpen] = useState(false);
   const [count, setCount] = useState(16);
   const [errorMessage, setErrorMessage] = useState("");
@@ -27,7 +28,7 @@ const Stack = () => {
     setErrorMessage("");
   };
 
-  const highlightAction = (index, delay, color , st) => {
+  const highlightAction = (index, delay, color, st) => {
     // console.log("index" , index)
     const bars = document.getElementsByClassName(`element${st}`);
     setTimeout(() => {
@@ -51,7 +52,7 @@ const Stack = () => {
         newStacks[stackIndex] = [...prevStacks[stackIndex], parseInt(element)];
         return newStacks;
       });
-      highlightAction(stacks[stackIndex].length, 2, "#32CD30" , stackIndex);
+      highlightAction(stacks[stackIndex].length, 2, "#32CD30", stackIndex);
     } else {
       setErrorMessage("Stack is Full");
       setWarningOpen(!warningOpen);
@@ -65,7 +66,7 @@ const Stack = () => {
         newStacks[stackIndex] = [...prevStacks[stackIndex].slice(0, -1)];
         return newStacks;
       });
-      highlightAction(stacks[stackIndex].length - 1, 1.5, "red" , stackIndex);
+      highlightAction(stacks[stackIndex].length - 1, 1.5, "red", stackIndex);
     } else {
       setErrorMessage("Stack is Empty");
       setWarningOpen(!warningOpen);
@@ -75,9 +76,9 @@ const Stack = () => {
   const push = (st1, st2) => {
     console.log(stacks)
     const elementToMove = stacks[st1][stacks[st1].length - 1];
-    if(stacks[st2].length !== 0){
+    if (stacks[st2].length !== 0) {
       let secondTopElement = stacks[st2][stacks[st2].length - 1];
-      if(elementToMove > secondTopElement){
+      if (elementToMove > secondTopElement) {
         setErrorMessage("Cannot Move Larger Element");
         setWarningOpen(!warningOpen);
         return;
@@ -104,9 +105,9 @@ const Stack = () => {
 
       <div className="container mx-auto stack-container d-flex justify-content-center">
         {stacks.map((stack, stackIndex) => (
-          <div style={{marginLeft : "2rem"}} className="stack d-flex flex-column-reverse justify-content-start align-items-center" key={stackIndex}>
+          <div style={{ marginLeft: "2rem", marginTop: "-3%" }} className="stack d-flex flex-column-reverse justify-content-start align-items-center" key={stackIndex}>
             {stack.map((value, idx) => (
-              <div  className="element-box" key={idx}>
+              <div className="element-box" key={idx}>
                 <p className="m-0">{idx === stack.length - 1 ? "Top" : ""}</p>
                 <div className={`element${stackIndex} d-flex align-items-center justify-content-center`}>
                   <p className="m-0">{value}</p>
@@ -115,17 +116,21 @@ const Stack = () => {
             ))}
           </div>
         ))}
-        <h3 style={{marginLeft:"2%"}}> Moves Left : {count}</h3>
+        <h3 style={{ marginLeft: "2%" }}> Moves Left : {count}</h3>
         <hr />
         <div className="controlls-container">
           <div className="col-sm-12 controlHandler">
-            <Button className="Button" variant="outlined" onClick={() => push(0 , 1)}>Push Stack 1 to Stack 2</Button>
-            <Button className="Button" variant="outlined" onClick={() => push(0 , 2)}>Push Stack 1 to Stack 3</Button>
-            <Button className="Button" variant="outlined" onClick={() => push(1 , 0 )}>Push Stack 2 to Stack 1</Button>
-            <Button className="Button" variant="outlined" onClick={() => push(1 , 2)}>Push Stack 2 to Stack 3</Button>
-            <Button className="Button" variant="outlined" onClick={() => push(2 , 0)}>Push Stack 3 to Stack 1</Button>
-            <Button className="Button" variant="outlined" onClick={() => push(2 , 1)}>Push Stack 3 to Stack 2</Button>
+            <Button className="Button" variant="outlined" onClick={() => push(0, 1)}>Push Stack 1 to Stack 2</Button>
+            <Button className="Button" variant="outlined" onClick={() => push(0, 2)}>Push Stack 1 to Stack 3</Button>
+            <Button className="Button" variant="outlined" onClick={() => push(1, 0)}>Push Stack 2 to Stack 1</Button>
+            <Button className="Button" variant="outlined" onClick={() => push(1, 2)}>Push Stack 2 to Stack 3</Button>
+            <Button className="Button" variant="outlined" onClick={() => push(2, 0)}>Push Stack 3 to Stack 1</Button>
+            <Button className="Button" variant="outlined" onClick={() => push(2, 1)}>Push Stack 3 to Stack 2</Button>
             <Button className="hello" variant="outlined" onClick={() => pass}>SUBMIT</Button>
+          </div>
+          <div style={{position : "absolute" , left:"5rem" , bottom :"37rem"}}>
+            <Information codeData={codeData.stack} />
+
           </div>
 
         </div>

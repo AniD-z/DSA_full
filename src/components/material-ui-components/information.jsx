@@ -40,7 +40,7 @@ export default function Information({ codeData }) {
         onClose={toggleDrawer("bottom", false)}
         onOpen={toggleDrawer("bottom", true)}
       >
-        {!token ? (
+        {token ? (
           <div className="p-5">
             <h1 className="display-4">Please login to view this content</h1>
             <button className="ml-2 btn btn-info btn-lg">

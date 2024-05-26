@@ -5,6 +5,27 @@ class Node {
   }
 }
 
+function getLength(node) {
+  let length = 0;
+  while (node) {
+    length++;
+    node = node.next;
+  }
+  return length;
+}
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+
+  if (num % 2 === 0 || num % 3 === 0) return false;
+
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) return false;
+  }
+  return true;
+}
+
 export default class SLinkedList {
   constructor(data) {
     let temp = new Node(data);
@@ -18,10 +39,13 @@ export default class SLinkedList {
   }
 
   insertFront(data) {
+    if(data===""){
+      return alert("Please enter a number")
+    }
     data = parseInt(data);
-    if (data.length > 2 || data.length === 0) {
+    if(data<=0 || data>8){
       return alert(
-        "Please only enter number between 0 to 100, greater number may spoil the styling."
+        "Please only enter number between 1 to 8"
       );
     }
     let temp = new Node(data);
@@ -32,12 +56,15 @@ export default class SLinkedList {
   }
 
   insertBack(data) {
-    if (data.length > 2 || data.length === 0) {
-      return alert(
-        "Please only enter number between 0 to 100, greater number may spoil the styling."
-      );
+    if(data===""){
+      return alert("Please enter a number")
     }
     data = parseInt(data);
+    if(data<=0 || data>8){
+      return alert(
+        "Please only enter number between 1 to 8"
+      );
+    }
     let temp = new Node(data);
     this.tail.next = temp;
     this.tail = this.tail.next;
@@ -46,12 +73,15 @@ export default class SLinkedList {
 
   insertAt(index, data) {
     index = parseInt(index);
-    if (data.length > 2 || data.length === 0) {
-      return alert(
-        "Please only enter number between 0 to 100, greater number may spoil the styling."
-      );
+    if(data===""){
+      return alert("Please enter a number")
     }
     data = parseInt(data);
+    if(data<=0 || data>8){
+      return alert(
+        "Please only enter number between 1 to 8"
+      );
+    }
     if (index === 0) {
       this.insertFront(data);
       return;
@@ -73,38 +103,6 @@ export default class SLinkedList {
     this.length += 1;
   }
 
-  // insertAfter(index, data) {
-  //   index = parseInt(index);
-  //   if (data.length > 2 || data.length === 0) {
-  //     return alert(
-  //       "Please only enter number between 0 to 100, greater number may spoil the styling."
-  //     );
-  //   }
-
-  //   if (index === this.length - 1) {
-  //     return this.insertBack(data);
-  //   }
-
-  //   if (index === 0) {
-  //     let val = this.head.name;
-  //     this.delete("0");
-  //     this.insertFront(data);
-  //     this.insertFront(val);
-  //     return;
-  //   }
-
-  //   let temp = this.head;
-  //   while (index) {
-  //     temp = temp.children[0];
-  //     index--;
-
-  //     const prevChild = temp.children[0];
-  //     const tempNew = new Node(data);
-  //     tempNew.children.push(prevChild);
-  //     temp.children[0] = tempNew;
-  //   }
-  // }
-
   delete(value) {
     value = parseInt(value);
     let temp = this.head;
@@ -121,32 +119,24 @@ export default class SLinkedList {
     this.length--;
   }
 
-  // delete(index) {
-  //   index = parseInt(index);
-  //   if (index === 0) {
-  //     let temp = this.head.children[0];
-  //     this.head = temp;
-  //     this.length--;
-  //   } else {
-  //     if (index < this.length) {
-  //       let temp = this.head;
-  //       let prev = null;
-  //       while (index && temp && temp.children.length !== 0) {
-  //         prev = temp;
-  //         temp = temp.children.length > 0 ? temp.children[0] : null;
-  //         index--;
-  //       }
-  //       if (temp.children.length > 0) {
-  //         prev.children[0] = temp.children[0];
-  //       } else {
-  //         prev.children = [];
-  //       }
-  //       this.length--;
-  //     } else {
-  //       return alert("Invalid Index");
-  //     }
-  //   }
-  // }
+
+
+  checkAdjacentSumPrimes(head) {
+    let current = head;
+    if (getLength(head) < 7) {
+      return false;
+    }
+    while (current && current.next) {
+      let sum = current.name + current.next.name;
+      if (!isPrime(sum)) {
+        return false;
+      }
+      current = current.next;
+    }
+    return true;
+  }
+
+
 
   reverse(q, p) {
     if (p !== null) {
@@ -156,23 +146,6 @@ export default class SLinkedList {
       this.head = q;
     }
   }
-
-  // Reverse() {
-  //   let p = this.head;
-  //   let q = null;
-  //   let r = null;
-  //   while (p) {
-  //     r = q;
-  //     q = p;
-  //     p = p.children[0];
-  //     if (r === null) {
-  //       q.children = [];
-  //     } else {
-  //       q.children[0] = r;
-  //     }
-  //   }
-  //   this.head = q;
-  // }
 
   display() {
     return this.head;
