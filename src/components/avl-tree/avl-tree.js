@@ -165,4 +165,16 @@ export default class AVLTree {
     if (this.root === p) this.root = plr;
     return plr;
   }
+
+  compareStructure(node1, node2) {
+    if (!node1 && !node2) {
+      return true;
+    }
+    if (!node1 || !node2) {
+      return false;
+    }
+    return this.compareStructure(node1.lchild, node2.lchild) &&
+           this.compareStructure(node1.rchild, node2.rchild);
+  }
+  
 }

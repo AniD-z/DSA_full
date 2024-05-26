@@ -76,6 +76,10 @@ const AVLTrees = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(value > 10 || value < 1){
+      alert("Please Enter a value between 1 to 10")
+      return;
+    }
     if (value !== "" && !value.isNaN) {
       insert(value);
     } else {
@@ -101,6 +105,10 @@ const AVLTrees = () => {
   const handleDelete = (e) => {
     try {
       e.preventDefault();
+      if(value > 10 || value < 1){
+        alert("Please Enter a value between 1 to 10")
+        return;
+      }
       if (toDel !== "" && !toDel.isNaN) {
         let v = considerTree.Delete(considerTree.getRoot(), parseInt(toDel));
         let result = refactor(v);
@@ -121,6 +129,27 @@ const AVLTrees = () => {
   const handleClear = () => {
     setConsiderTree(null);
     setCreated(false);
+  };
+
+  const handleCompare = () => {
+    // e.preventDefault();
+    const defaultTree = new AVLTree(7);  // Define your default tree structure here
+    defaultTree.insert(defaultTree.getRoot(), 1);
+    defaultTree.insert(defaultTree.getRoot(), 2);
+    defaultTree.insert(defaultTree.getRoot(), 3);
+    defaultTree.insert(defaultTree.getRoot(), 4);
+    defaultTree.insert(defaultTree.getRoot(), 5);
+    defaultTree.insert(defaultTree.getRoot(), 6);
+    defaultTree.insert(defaultTree.getRoot(), 7);
+
+    console.log(considerTree)
+
+
+    const isSameStructure = considerTree.compareStructure(
+      considerTree.getRoot(),
+      defaultTree.getRoot()
+    );
+    alert(isSameStructure ? "Structures are the same" : "Structures are different");
   };
 
   if (considerTree && !considerTree.getRoot()) {
@@ -207,7 +236,7 @@ const AVLTrees = () => {
               {isCreated && (
                 <form onSubmit={handleDelete}>
                   <div className="row">
-                    <div className="col">
+                    <div style={{width : "24rem"}} className="col">
                       <input
                         placeholder="Node to Delete"
                         onChange={deleteValHandler}
@@ -226,6 +255,18 @@ const AVLTrees = () => {
                     </div>
                   </div>
                 </form>
+              )}
+            </div>
+            <div className="col d-flex align-items-center controlHandler">
+              {isCreated && (
+                      <Button
+                        type="submit"
+                        className="Button"
+                        varient="outlined"
+                        onClick={handleCompare}
+                      >
+                        Compare
+                      </Button>
               )}
             </div>
           </div>
