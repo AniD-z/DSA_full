@@ -136,20 +136,20 @@ export const Intro = () => {
     <section className="intro-page">
       <div className="intro-start-box ff-tc">
         <div className="intro-quote ">
-          <div className="qt-txt qt-up">Enhancing your</div>
-          <div className="qt-emp">INGENUITY</div>
-          <div className="qt-txt qt-down">while playing!</div>
+          <div className="qt-txt qt-up">Elevate Your</div>
+          <div className="qt-emp">Problem-Solving</div>
+          <div className="qt-txt qt-down">While Escaping!</div>
         </div>
         <div className="intro-title intro-lap">
           <div className="title-up">
-            <div className="">SCHEMA</div>
+            <div className="">Algorithmic</div>
             <div className="line-up">
               <div className="line"></div>
               <div className="date-up "></div>
             </div>
           </div>
           <div className="title-down">
-            <div className="">VERSE!</div>
+            <div className="">Arcade</div>
             <div className="line-down">
               <div className="line"></div>
               <div className="date-down "></div>

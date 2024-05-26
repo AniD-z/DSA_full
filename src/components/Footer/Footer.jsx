@@ -13,7 +13,7 @@ function Footer() {
           >
            
             <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white ff-tc uppercase">
-              Schema Verse
+            Algorithmic Arcade
             </span>
           </a>
           <ul className="flex flex-wrap justify-center  items-center mb-6 text-sm font-medium text-black-500 sm:mb-0 dark:text-black-400">
