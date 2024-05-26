@@ -161,21 +161,21 @@ export const Intro = () => {
           {/* <div className="title-left ot-red"> */}
           <div className="title-mob-box">
             <ul className="title-mob ul-left">
-              <li className="">S</li>
-              <li className="">C</li>
-              <li className="">H</li>
-              <li className="">E</li>
+              <li className="">A</li>
+              <li className="">L</li>
+              <li className="">G</li>
+              <li className="">O</li>
               <li className="">M</li>
               <li className="">A</li>
             </ul>
             {/* </div> */}
             {/* <div className="title-right ot-red text-black"> */}
             <ul className="title-mob ul-right">
-              <li>V</li>
-              <li>E</li>
+              <li>A</li>
               <li>R</li>
-              <li>S</li>
-              
+              <li>C</li>
+              <li>A</li>
+              <li>D</li>
               <li>E</li>
             </ul>
           </div>

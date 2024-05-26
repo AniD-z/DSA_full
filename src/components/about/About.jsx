@@ -11,12 +11,12 @@ export default function About() {
           <div className="info-text text-white text-[24px]">
             <p>
               {" "}
-              Welcome to <span className="span-emp">Algorithmic Arcade</span>, the ultimate game that will teach you <span className="span-emp">DATA</span> structures in a fun and interactive way!
+              Welcome to <span className="span-emp">Algorithmic Arcade</span>, the ultimate game that will teach you <span className="span-emp">DATA Structures</span> in a fun and interactive way!
 
                There are many levels
 or rooms which are related to the concepts of data structures
 such as the Linked List, Trees, Stacks etc. You as the player have to use
-your knowledge in data structures and crack these levels           </p>
+your knowledge in data structures and crack these levels.          </p>
             <p>
             Algorithmic Arcade is more than just a game, it is a learning experience that will make you a DSA pro. So what are you waiting for? Try Algorithmic Arcade today and unleash your inner detective! 🔎
             </p>
@@ -24,7 +24,7 @@ your knowledge in data structures and crack these levels           </p>
           <div className="hero-cards w-full">
             <div className="info-container flex flex-wrap h-full flex-col justify-evenly ">
               <Infocards
-                name="Querying"
+                name="Visualizing"
                 clr="black"
                 gif="/pics/gif1.gif"
                 bg="bg-white"
@@ -40,7 +40,7 @@ your knowledge in data structures and crack these levels           </p>
               />
 
               <Infocards
-                name="indexing"
+                name="Space Complexity"
                 clr="black"
                 gif="/pics/gif4.gif"
                 bg="bg-[#ece1d6]"

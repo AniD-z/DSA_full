@@ -58,7 +58,7 @@ export default function Events_landing() {
               <div class="article-body">
                 <h2>Level 1</h2>
                 <p>
-                  Arrays
+                  You find yourself locked in a digital vault with a screen displaying an array. The array represents a combination lock to the vault door. You must manipulate the array to match the target sequence displayed on another screen to unlock the door and escape.
                 </p>
                 <a href="#" class="read-more" onClick={handleClick1}>
                   Play-now{" "}
@@ -87,7 +87,7 @@ export default function Events_landing() {
               <div class="article-body">
                 <h2>Level 2</h2>
                 <p>
-                Stack
+                You are presented with three stacks. You must use these stacks to sort and submit a sequence of elements that match the target sequence displayed on the control panel to unlock the door and escape.
                 </p>
                 <a href="#" class="read-more" onClick={handleClick2}>
                   Play-now{" "}
@@ -116,7 +116,7 @@ export default function Events_landing() {
               <div class="article-body">
                 <h2>Level 3</h2>
                 <p>
-                Queue
+                You see a queue of people standing outside... You have to let them in one at a time, then arrange them such that no two Males are next to each other, only then can you leave the room.
                 </p>
                 <a href="#" class="read-more" onClick={handleClick3}>
                   Play-now{" "}
@@ -146,7 +146,7 @@ export default function Events_landing() {
               <div class="article-body">
                 <h2>Level 4</h2>
                 <p>
-                Single linked list
+                You must create a sequence where the sum of two consecutive numbers is always a prime number. The sequence must start with the smallest number and use all nodes. Can you solve the puzzle and move onto the next room?
                 </p>
                 <a href="#" class="read-more" onClick={handleClick4}>
                   Play-now{" "}
@@ -176,7 +176,8 @@ export default function Events_landing() {
               <div class="article-body">
                 <h2>Level 5</h2>
                 <p>
-                  Avl Trees
+                You see a diagram on the wall... and you're given a set of elements from 1 to 10. 
+I6, D2, I6, D3. This code is scribbled next to the diagram on the wall, you realize that you have to follow some order of insertions and deletions to somehow match the diagram to leave this cave you've been locked into.
 
                 </p>
                 <a href="#" class="read-more" onClick={handleClick5}>
@@ -207,7 +208,7 @@ export default function Events_landing() {
               <div class="article-body">
                 <h2>Level 6</h2>
                 <p>
-                Boss
+                Open level to find out!
                  </p>
                 <a href="#" class="read-more" onClick={handleClick6}>
                 Play-now{" "}
