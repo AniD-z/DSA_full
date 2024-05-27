@@ -7,6 +7,7 @@ import Que from "./components/que/Que";
 import Stack from "./components/stack/Stack";
 import AVLTrees from "./components/avl-tree/AVLTrees";
 import Arr from "./components/array/Array";
+import Final from "./components/final/Final"
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import SingleLinkedList from "./components/singleLinkedList/singleLinkedList";
 
@@ -23,6 +24,7 @@ function Routee() {
           <Route path="/avlTree" exact element={<AVLTrees />} />
           <Route path="/array" exact element={<Arr />} />
           <Route path="/ll" exact element={<SingleLinkedList />} />
+          <Route path="/final" exact element={<Final />} />
         </Routes>
       </BrowserRouter>
     </div>
