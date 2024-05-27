@@ -1,12 +1,12 @@
 // const img = document.createElement('img');
 // img.src = 'structure.png';
 const codeData = {
-  array: {
-    name: `Array Data Structure`,
-	
-    intro:"You find yourself locked in a digital vault with a screen displaying an array. The array represents a combination lock to the vault door.An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array). The base value is index 0 and the difference between the two indexes is the offset.",
-	
-    cpp: `#include <stdio.h>
+	array: {
+		name: `Array Data Structure`,
+
+		intro: "You find yourself locked in a digital vault with a screen displaying an array. The array represents a combination lock to the vault door.An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array). The base value is index 0 and the difference between the two indexes is the offset.",
+
+		cpp: `#include <stdio.h>
 
 #include <stdlib.h>
 
@@ -415,7 +415,7 @@ void del()
 }
 
 `,
-    java: `//Java Program to illustrate how to declare, instantiate, initialize  
+		java: `//Java Program to illustrate how to declare, instantiate, initialize  
 //and traverse the Java array.  
 class Testarray{  
 public static void main(String args[]){  
@@ -430,7 +430,7 @@ for(int i=0;i<a.length;i++)//length is the property of array
 System.out.println(a[i]);  
 }}  
 `,
-    python: `# Python program to demonstrate
+		python: `# Python program to demonstrate
 # Creation of Array
 
 # importing "array" for array creations
@@ -450,14 +450,14 @@ b = arr.array('d', [2.5, 3.2, 3.3])
 
 # printing original array
 `,
-  },
-  stack: {
-    name: `Stack Data Structure`,
-    intro: `You are presented with three stacks. You must use these stacks to sort and submit a sequence of elements that match the target sequence displayed on the control panel to unlock the door and escape.
+	},
+	stack: {
+		name: `Stack Data Structure`,
+		intro: `You are presented with three stacks. You must use these stacks to sort and submit a sequence of elements that match the target sequence displayed on the control panel to unlock the door and escape.
 	Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).
 There are many real-life examples of a stack. Consider an example of plates stacked over one another in the canteen. The plate which is at the top is the first one to be removed, i.e. the plate which has been placed at the bottommost position remains in the stack for the longest period of time. So, it can be simply seen to follow LIFO(Last In First Out)/FILO(First In Last Out) order.
 `,
-    cpp: `#include <stdio.h>
+		cpp: `#include <stdio.h>
 
 #include <stdlib.h>
 
@@ -633,7 +633,7 @@ void show()
     }
 }
 `,
-    java: `// Java Code for Linked List Implementation
+		java: `// Java Code for Linked List Implementation
 
 public class StackAsLinkedList {
 
@@ -711,7 +711,7 @@ public class StackAsLinkedList {
 	}
 }
 `,
-    python: `# Python program for linked list implementation of stack
+		python: `# Python program for linked list implementation of stack
 
 # Class to represent a node
 
@@ -762,13 +762,13 @@ stack.push(30)
 print "% d popped from stack" % (stack.pop())
 print "Top element is % d " % (stack.peek())
 `,
-  },
-  queue: {
-    name: `Queue Data Structure`,
-    intro: `                You see a queue of people standing outside... You have to let them in one at a time, then arrange them such that no two Males are next to each other, only then can you leave the room.
+	},
+	queue: {
+		name: `Queue Data Structure`,
+		intro: `                You see a queue of people standing outside... You have to let them in one at a time, then arrange them such that no two Males are next to each other, only then can you leave the room.
 	A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO). A good example of a queue is any queue of consumers for a resource where the consumer that came first is served first. The difference between stacks and queues is in removing. In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added. It works on the principle of First In First Out.`,
-	
-    java: `// Java program to demonstrate a Queue
+
+		java: `// Java program to demonstrate a Queue
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -811,7 +811,7 @@ public class QueueExample {
 	}
 }
 `,
-    python: `# Python program to
+		python: `# Python program to
 # demonstrate queue implementation
 # using list
 
@@ -839,16 +839,16 @@ print(queue)
 # will raise and IndexError
 # as the queue is now empty
 `,
-  },
-  //   single linked list
-  sll: {
-    name: `Single Linked list`,
-    intro: `                You must create a sequence where the sum of two consecutive numbers is always a prime number. The sequence must start with the smallest number and use all nodes. Can you solve the puzzle and move onto the next room?
+	},
+	//   single linked list
+	sll: {
+		name: `Single Linked list`,
+		intro: `                You must create a sequence where the sum of two consecutive numbers is always a prime number. The sequence must start with the smallest number and use all nodes. Can you solve the puzzle and move onto the next room?
 	A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers as shown in the below: Consider 4 nodes [A,B,C & D]
 So in Linked List Data Structure, A is the head which is connected to the next block (i.e B) which is connected to C & the C block is connected to the D block respectively. 
 In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
 `,
-    cpp: `#include <iostream>
+		cpp: `#include <iostream>
 
 using namespace std;
 
@@ -896,7 +896,7 @@ int main()
     return 0;
 }
 `,
-    java: `public class SinglyLinkedList {    
+		java: `public class SinglyLinkedList {    
     //Represent a node of the singly linked list    
     class Node{    
         int data;    
@@ -964,7 +964,7 @@ int main()
     }    
 }    
 `,
-    python: `# A single node of a singly linked list
+		python: `# A single node of a singly linked list
 class Node:
   # constructor
   def __init__(self, data = None, next=None): 
@@ -1001,16 +1001,20 @@ LL.insert(4)
 LL.insert(5)
 LL.printLL()
 `,
-  },
-  //   linear search
-  ls: {
-    name: `Linear Search`,
-    intro: `A simple approach is to do a linear search, i.e  
+	},
+	final:{
+		name:`Final Escape`,
+		intro:`You must remove all elements which are valid balance factors for an AVL Tree, and then create a sequence within the linked list such that two consecutive numbers add upto a perfect square. Also, both stacks must be empty to open the final lock and escape the chamber of structures.`
+	},
+	//   linear search
+	ls: {
+		name: `Linear Search`,
+		intro: `A simple approach is to do a linear search, i.e  
 •	Start from the leftmost element of arr[] and one by one compare x with each element of arr[]
 •	If x matches with an element, return the index.
 •	If x doesn’t match with any of elements, return -1.
 `,
-    cpp: `// C++ code to linearly search x in arr[]. If x
+		cpp: `// C++ code to linearly search x in arr[]. If x
 // is present then return its location, otherwise
 // return -1
 
@@ -1040,7 +1044,7 @@ int main(void)
 		: cout << "Element is present at index " << result;
 	return 0;
 `,
-    java: `import java.util.Scanner;  
+		java: `import java.util.Scanner;  
   
 public class Leniear_Search {  
 public static void main(String[] args) {  
@@ -1069,7 +1073,7 @@ public static void main(String[] args) {
 }  
 }  
 `,
-    python: `# Python3 code to linearly search x in arr[].
+		python: `# Python3 code to linearly search x in arr[].
 # If x is present then return its location,
 # otherwise return -1
 
@@ -1094,11 +1098,11 @@ if(result == -1):
 else:
 	print("Element is present at index", result)
 `,
-  },
-  //   binary Search
-  bs: {
-    name: `Binary Search`,
-    intro: `Given a sorted array arr[] of n elements, write a function to search a given element x in arr[].
+	},
+	//   binary Search
+	bs: {
+		name: `Binary Search`,
+		intro: `Given a sorted array arr[] of n elements, write a function to search a given element x in arr[].
 A simple approach is to do Linear Search. The time complexity of the above algorithm is O(n). Another approach to perform the same task is using Binary Search. 
 Binary Search: Search a sorted array by repeatedly dividing the search interval in half. Begin with an interval covering the whole array. If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. Otherwise, narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.
 
@@ -1110,7 +1114,7 @@ We basically ignore half of the elements just after one comparison.
 3.	Else If x is greater than the mid element, then x can only lie in the right half subarray after the mid element. So we recur for the right half.
 4.	Else (x is smaller) recur for the left half.
 `,
-    cpp: `// C++ program to implement recursive Binary Search
+		cpp: `// C++ program to implement recursive Binary Search
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -1153,7 +1157,7 @@ int main(void)
 	return 0;
 }
 `,
-    java: `import java.util.*;  
+		java: `import java.util.*;  
 public class BinarySearch {  
 public static void main(String[] args) {  
     int[] arr = {16, 19, 20, 23, 45, 56, 78, 90, 96, 100};  
@@ -1191,7 +1195,7 @@ public static int binarySearch(int[] a, int beg, int end, int item)
 }  
 }  
 `,
-    python: `def binarySearch(arr,beg,end,item):  
+		python: `def binarySearch(arr,beg,end,item):  
     if end >= beg:  
         mid = int((beg+end)/2)  
         if arr[mid] == item :  
@@ -1212,12 +1216,12 @@ if location != -1:
 else:   
     print("Item not found")  
 `,
-  },
-  //   bubble sort
-  bso: {
-    name: `Bubble Sort`,
-    intro: `Bubble sort is a simple sorting algorithm. This sorting algorithm is comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order. This algorithm is not suitable for large data sets as its average and worst-case complexity are of Ο(n2) where n is the number of items.`,
-    cpp: `#include<iostream>
+	},
+	//   bubble sort
+	bso: {
+		name: `Bubble Sort`,
+		intro: `Bubble sort is a simple sorting algorithm. This sorting algorithm is comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order. This algorithm is not suitable for large data sets as its average and worst-case complexity are of Ο(n2) where n is the number of items.`,
+		cpp: `#include<iostream>
 using namespace std;
 void swapping(int &a, int &b) {      //swap the content of a and b
    int temp;
@@ -1259,7 +1263,7 @@ int main() {
    display(arr, n);
 }
 `,
-    java: `public class BubbleSortExample {  
+		java: `public class BubbleSortExample {  
     static void bubbleSort(int[] arr) {  
         int n = arr.length;  
         int temp = 0;  
@@ -1295,7 +1299,7 @@ int main() {
         }  
 }  
 `,
-    python: `# Python program for implementation of Bubble Sort
+		python: `# Python program for implementation of Bubble Sort
 
 def bubbleSort(arr):
 	n = len(arr)
@@ -1322,18 +1326,18 @@ print ("Sorted array is:")
 for i in range(len(arr)):
 	print ("%d" %arr[i]),
 `,
-  },
-  //   insertion Sort
-  is: {
-    name: `Insertion Sort`,
-    intro: `Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
+	},
+	//   insertion Sort
+	is: {
+		name: `Insertion Sort`,
+		intro: `Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
 Algorithm 
 To sort an array of size n in ascending order: 
 1: Iterate from arr[1] to arr[n] over the array. 
 2: Compare the current element (key) to its predecessor. 
 3: If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.
 `,
-    cpp: `++:// C++ program for insertion sort
+		cpp: `++:// C++ program for insertion sort
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -1379,7 +1383,7 @@ int main()
 	return 0;
 }
 `,
-    java: `// Java program for implementation of Insertion Sort
+		java: `// Java program for implementation of Insertion Sort
 class InsertionSort {
 	/*Function to sort array using insertion sort*/
 	void sort(int arr[])
@@ -1423,7 +1427,7 @@ class InsertionSort {
 } 
 
 `,
-    python: `# Python program for implementation of Insertion Sort
+		python: `# Python program for implementation of Insertion Sort
 
 # Function to do insertion sort
 def insertionSort(arr):
@@ -1449,16 +1453,16 @@ insertionSort(arr)
 for i in range(len(arr)):
 	print ("% d" % arr[i])
 `,
-  },
-  //   Selection sort
-  ss: {
-    name: `Selection Sort`,
-    intro: `The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.
+	},
+	//   Selection sort
+	ss: {
+		name: `Selection Sort`,
+		intro: `The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.
 1) The subarray which is already sorted.
 2) Remaining subarray which is unsorted.
 In every iteration of selection sort, the minimum element (considering ascending order) from the unsorted subarray is picked and moved to the sorted subarray.
 `,
-    cpp: `// C++ program for implementation of selection sort
+		cpp: `// C++ program for implementation of selection sort
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -1507,7 +1511,7 @@ int main()
 	return 0;
 }
 `,
-    java: `// Java program for implementation of Selection Sort
+		java: `// Java program for implementation of Selection Sort
 class SelectionSort
 {
 	void sort(int arr[])
@@ -1551,7 +1555,7 @@ class SelectionSort
 	}
 }
 `,
-    python: `# Python program for implementation of Selection
+		python: `# Python program for implementation of Selection
 # Sort
 import sys
 A = [64, 25, 12, 22, 11]
@@ -1575,18 +1579,18 @@ print ("Sorted array")
 for i in range(len(A)):
 	print("%d" %A[i]),
 `,
-  },
-  //   Quick Sort
-  qs: {
-    name: `Quick Sort`,
-    intro: `QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways. 
+	},
+	//   Quick Sort
+	qs: {
+		name: `Quick Sort`,
+		intro: `QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways. 
 1.	Always pick first element as pivot.
 2.	Always pick last element as pivot (implemented below)
 3.	Pick a random element as pivot.
 4.	Pick median as pivot.
 The key process in quickSort is partition(). Target of partitions is, given an array and an element x of array as pivot, put x at its correct position in sorted array and put all smaller elements (smaller than x) before x, and put all greater elements (greater than x) after x. All this should be done in linear time.
 `,
-    cpp: `/* C++ implementation of QuickSort */
+		cpp: `/* C++ implementation of QuickSort */
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -1660,7 +1664,7 @@ int main()
 	return 0;
 }
 `,
-    java: `// Java implementation of QuickSort
+		java: `// Java implementation of QuickSort
 import java.io.*;
 
 class GFG{
@@ -1749,7 +1753,7 @@ public static void main(String[] args)
 }
 }
 `,
-    python: `# Python3 implementation of QuickSort
+		python: `# Python3 implementation of QuickSort
 
 # This Function handles sorting part of quick sort
 # start and end points to first and last element of
@@ -1807,11 +1811,11 @@ quick_sort(0, len(array) - 1, array)
 
 print(f'Sorted array: {array}')
 `,
-  },
-  //   binary tree
-  bt: {
-    name: `Binary Tree`,
-    intro: `A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
+	},
+	//   binary tree
+	bt: {
+		name: `Binary Tree`,
+		intro: `A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
 
 Example of Binary Tree Data Structure is: 1,2,3,4,5,6,7,8,9,10,11,12,13,14.
 A Binary Tree node contains following parts.
@@ -1819,7 +1823,7 @@ A Binary Tree node contains following parts.
 2.	Pointer to left child
 3.	Pointer to right child
 `,
-    cpp: `#include <bits/stdc++.h>
+		cpp: `#include <bits/stdc++.h>
 using namespace std;
 
 struct Node {
@@ -1876,7 +1880,7 @@ int main()
 	return 0;
 }
 `,
-    java: `/* Class containing left and right child of current
+		java: `/* Class containing left and right child of current
 node and key value*/
 class Node
 {
@@ -1944,7 +1948,7 @@ class BinaryTree
 	}
 }
 `,
-    python: `# Python program to introduce Binary Tree
+		python: `# Python program to introduce Binary Tree
 
 # A class that represents an individual node in a
 # Binary Tree
@@ -1983,12 +1987,12 @@ root.left.left = Node(4);
 / \
 None None'''
 `,
-  },
-  //   avl tree
-  avl: {
-    name: `AVL Tree`,
-	
-    intro: `You see a diagram on the wall... and you're given a set of elements from 1 to 10. 
+	},
+	//   avl tree
+	avl: {
+		name: `AVL Tree`,
+
+		intro: `You see a diagram on the wall... and you're given a set of elements from 1 to 10. 
 	I6, D2, I6, D3. This code is scribbled next to the diagram on the wall, you realize that you have to follow some order of insertions and deletions to somehow match the diagram to leave this cave you've been locked into.
 	![AVL Tree Diagram](structure.png)
 	
@@ -2007,7 +2011,7 @@ The above tree is not AVL because differences between heights of left and right 
 Why AVL Trees? 
 Most of the BST operations (e.g., search, max, min, insert, delete.. etc) take O(h) time where h is the height of the BST. The cost of these operations may become O(n) for a skewed Binary tree. If we make sure that height of the tree remains O(Logn) after every insertion and deletion, then we can guarantee an upper bound of O(Logn) for all these operations. The height of an AVL tree is always O(Logn) where n is the number of nodes in the tree.
 `,
-    cpp: `// C++ program to insert a node in AVL tree
+		cpp: `// C++ program to insert a node in AVL tree
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -2203,7 +2207,7 @@ int main()
 	return 0;
 }
 `,
-    java: `// Java program for insertion in AVL Tree
+		java: `// Java program for insertion in AVL Tree
 class Node {
 	int key, height;
 	Node left, right;
@@ -2357,7 +2361,7 @@ class AVLTree {
 	}
 }
 `,
-    python: `# Python code to insert a node in AVL tree
+		python: `# Python code to insert a node in AVL tree
 
 # Generic tree node class
 class TreeNode(object):
@@ -2496,12 +2500,12 @@ print("Preorder traversal of the",
 myTree.preOrder(root)
 print()
 `,
-  },
-  //   Dijkstra’s Algorithm
-  pf: {
-    name: `Dijkstra’s Algorithm `,
-    intro: ``,
-    cpp: `// A C++ program for Dijkstra's single source shortest path algorithm.
+	},
+	//   Dijkstra’s Algorithm
+	pf: {
+		name: `Dijkstra’s Algorithm `,
+		intro: ``,
+		cpp: `// A C++ program for Dijkstra's single source shortest path algorithm.
 // The program is for adjacency matrix representation of the graph
 
 #include <limits.h>
@@ -2592,7 +2596,7 @@ int main()
 	return 0;
 }
 `,
-    java: `// A Java program for Dijkstra's single source shortest path algorithm.
+		java: `// A Java program for Dijkstra's single source shortest path algorithm.
 // The program is for adjacency matrix representation of the graph
 import java.util.*;
 import java.lang.*;
@@ -2688,7 +2692,7 @@ class ShortestPath {
 	}
 }
 `,
-    python: `# Python program for Dijkstra's single
+		python: `# Python program for Dijkstra's single
 # source shortest path algorithm. The program is
 # for adjacency matrix representation of the graph
 
@@ -2770,7 +2774,7 @@ g.graph = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
 
 g.dijkstra(0);
 `,
-  },
+	},
 };
 
 export default codeData;

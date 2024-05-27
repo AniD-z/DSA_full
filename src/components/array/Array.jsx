@@ -24,7 +24,7 @@ const Arr = () => {
   const [noElement, setNoElement] = useState(InitialElements - 1);
   // arrat for storing element
   const [elements, setElements] = useState([4, 3, 7, 1, 8]);
-  const [count, setCount] = useState(2);
+  const [count, setCount] = useState(8);
 
   // index
   const [index, setIndex] = useState("");

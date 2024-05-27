@@ -17,7 +17,7 @@ const Stack = () => {
   const [stacks, setStacks] = useState([[4, 3, 2, 1], [], []]);
   const [done , setDone] = useState(false)
   const [open, setOpen] = useState(false);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(16);
   const [errorMessage, setErrorMessage] = useState("");
   const [warningOpen, setWarningOpen] = useState(false);
 

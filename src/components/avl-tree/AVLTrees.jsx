@@ -111,7 +111,7 @@ const AVLTrees = () => {
   const handleDelete = (e) => {
     try {
       e.preventDefault();
-      if (value > 10 || value < 1) {
+      if (toDel > 10 || toDel < 1) {
         alert("Please Enter a value between 1 to 10")
         return;
       }

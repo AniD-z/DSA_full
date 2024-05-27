@@ -26,6 +26,12 @@ function isPrime(num) {
   return true;
 }
 
+function isPerfectSquare(num) {
+  if (num < 0) return false;
+  let sqrt = Math.sqrt(num);
+  return sqrt === Math.floor(sqrt);
+}
+
 export default class SLinkedList {
   constructor(data) {
     let temp = new Node(data);
@@ -43,11 +49,11 @@ export default class SLinkedList {
       return alert("Please enter a number")
     }
     data = parseInt(data);
-    if(data<-1|| data>8){
-      return alert(
-        "Please only enter number between 1 to 8"
-      );
-    }
+    // if(data<-1|| data>8){
+    //   return alert(
+    //     "Please only enter number between 1 to 8"
+    //   );
+    // }
     let temp = new Node(data);
     temp.next = this.head;
     this.head = temp;
@@ -60,11 +66,11 @@ export default class SLinkedList {
       return alert("Please enter a number")
     }
     data = parseInt(data);
-    if(data<-2 || data>8){
-      return alert(
-        "Please only enter number between 1 to 8"
-      );
-    }
+    // if(data<-2 || data>8){
+    //   return alert(
+    //     "Please only enter number between 1 to 8"
+    //   );
+    // }
     let temp = new Node(data);
     this.tail.next = temp;
     this.tail = this.tail.next;
@@ -136,7 +142,26 @@ export default class SLinkedList {
     return true;
   }
 
+  
 
+  checkAdjacentSumPerfectSquares(head) {
+    if (getLength(head) < 6) {
+      return false;
+    }
+    let current = head;
+    if (!current || !current.next) {
+      return false; // List too short to check pairs
+    }
+    
+    while (current && current.next) {
+      let sum = current.name + current.next.name;
+      if (!isPerfectSquare(sum)) {
+        return false;
+      }
+      current = current.next;
+    }
+    return true;
+  }
 
   reverse(q, p) {
     if (p !== null) {
