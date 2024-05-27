@@ -1,7 +1,11 @@
+// const img = document.createElement('img');
+// img.src = 'structure.png';
 const codeData = {
   array: {
     name: `Array Data Structure`,
-    intro: `An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array). The base value is index 0 and the difference between the two indexes is the offset.`,
+	
+    intro:"You find yourself locked in a digital vault with a screen displaying an array. The array represents a combination lock to the vault door.An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array). The base value is index 0 and the difference between the two indexes is the offset.",
+	
     cpp: `#include <stdio.h>
 
 #include <stdlib.h>
@@ -449,7 +453,8 @@ b = arr.array('d', [2.5, 3.2, 3.3])
   },
   stack: {
     name: `Stack Data Structure`,
-    intro: `Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).
+    intro: `You are presented with three stacks. You must use these stacks to sort and submit a sequence of elements that match the target sequence displayed on the control panel to unlock the door and escape.
+	Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).
 There are many real-life examples of a stack. Consider an example of plates stacked over one another in the canteen. The plate which is at the top is the first one to be removed, i.e. the plate which has been placed at the bottommost position remains in the stack for the longest period of time. So, it can be simply seen to follow LIFO(Last In First Out)/FILO(First In Last Out) order.
 `,
     cpp: `#include <stdio.h>
@@ -760,7 +765,8 @@ print "Top element is % d " % (stack.peek())
   },
   queue: {
     name: `Queue Data Structure`,
-    intro: `A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO). A good example of a queue is any queue of consumers for a resource where the consumer that came first is served first. The difference between stacks and queues is in removing. In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added. It works on the principle of First In First Out.`,
+    intro: `                You see a queue of people standing outside... You have to let them in one at a time, then arrange them such that no two Males are next to each other, only then can you leave the room.
+	A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO). A good example of a queue is any queue of consumers for a resource where the consumer that came first is served first. The difference between stacks and queues is in removing. In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added. It works on the principle of First In First Out.`,
 	
     java: `// Java program to demonstrate a Queue
 
@@ -837,7 +843,8 @@ print(queue)
   //   single linked list
   sll: {
     name: `Single Linked list`,
-    intro: `A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers as shown in the below: Consider 4 nodes [A,B,C & D]
+    intro: `                You must create a sequence where the sum of two consecutive numbers is always a prime number. The sequence must start with the smallest number and use all nodes. Can you solve the puzzle and move onto the next room?
+	A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers as shown in the below: Consider 4 nodes [A,B,C & D]
 So in Linked List Data Structure, A is the head which is connected to the next block (i.e B) which is connected to C & the C block is connected to the D block respectively. 
 In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
 `,
@@ -1980,12 +1987,19 @@ None None'''
   //   avl tree
   avl: {
     name: `AVL Tree`,
-    intro: `AVL tree is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees cannot be more than one for all nodes. 
+	
+    intro: `You see a diagram on the wall... and you're given a set of elements from 1 to 10. 
+	I6, D2, I6, D3. This code is scribbled next to the diagram on the wall, you realize that you have to follow some order of insertions and deletions to somehow match the diagram to leave this cave you've been locked into.
+	![AVL Tree Diagram](structure.png)
+	
+	AVL tree is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees cannot be more than one for all nodes. 
+
 
 Example: 12,8,18,11,17,5,4
  
 The above tree is AVL because differences between heights of left and right subtrees for every node is less than or equal to 1.
 An Example Tree that is NOT an AVL Tree 
+
 
 Example: 12,18,8,11,17,5,4,7,2
 
