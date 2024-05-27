@@ -1,3 +1,5 @@
+// const img = document.createElement('img');
+// img.src = 'structure.png';
 const codeData = {
   array: {
     name: `Array Data Structure`,
@@ -1985,13 +1987,19 @@ None None'''
   //   avl tree
   avl: {
     name: `AVL Tree`,
+	
     intro: `You see a diagram on the wall... and you're given a set of elements from 1 to 10. 
-	I6, D2, I6, D3. This code is scribbled next to the diagram on the wall, you realize that you have to follow some order of insertions and deletions to somehow match the diagram to leave this cave you've been locked into.AVL tree is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees cannot be more than one for all nodes. 
+	I6, D2, I6, D3. This code is scribbled next to the diagram on the wall, you realize that you have to follow some order of insertions and deletions to somehow match the diagram to leave this cave you've been locked into.
+	![AVL Tree Diagram](structure.png)
+	
+	AVL tree is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees cannot be more than one for all nodes. 
+
 
 Example: 12,8,18,11,17,5,4
  
 The above tree is AVL because differences between heights of left and right subtrees for every node is less than or equal to 1.
 An Example Tree that is NOT an AVL Tree 
+
 
 Example: 12,18,8,11,17,5,4,7,2
 

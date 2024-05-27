@@ -5,9 +5,10 @@ import { AppBar, Tab, Tabs, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Editor from "../code-editor/editor";
 import Chip from '@mui/material/Chip';
-
+import { useLocation } from "react-router-dom";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+  const location = useLocation()
 
   return (
     <div
@@ -56,6 +57,7 @@ export default function SimpleTabs({ codeData }) {
 
   return (
     <div className={classes.root}>
+      {location.pathname==="/avlTree" && <center><img style={{ width: "600px" }} src="structure.png" ></img></center>}
       <AppBar color="default" position="static">
         <Tabs
           value={value}
